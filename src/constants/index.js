@@ -132,7 +132,7 @@ export const cities = [
         id:5,
         name: "San Francisco",
         image: "https://example.com/images/sf.jpg",
-        description: "Immerse yourself in the tech-savvy and artistic scene of San Francisco. With the Golden Gate Bridge and historic neighborhoods, the city offers a picturesque backdrop."
+        description: "hii Immerse yourself in the tech-savvy and artistic scene of San Francisco. With the Golden Gate Bridge and historic neighborhoods, the city offers a picturesque backdrop."
       }
 ]
 
