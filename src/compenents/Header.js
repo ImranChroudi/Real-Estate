@@ -3,8 +3,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <nav className='bg-[#F7F7FD] text-[#7065F0] flex justify-center items-center py-4 px-3 w-full '>
-            <img src='' alt=''/>
+        <nav className='bg-[#F7F7FD] text-[#7065F0] flex justify-between items-center py-4 px-3 w-full '>
+            <img src='./assets/logo.jpeg' alt='' className='mr-6'/>
             <input
                type="text-[#D9D9D9]"
                placeholder="Search..."
