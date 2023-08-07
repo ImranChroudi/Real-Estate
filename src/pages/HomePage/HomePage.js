@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import WelcomSection from './WelcomSection'
 
 const HomePage = () => {
@@ -9,4 +9,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default memo(HomePage)

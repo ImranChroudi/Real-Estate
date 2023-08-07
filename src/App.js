@@ -1,21 +1,21 @@
 import React from 'react'
-<<<<<<< HEAD
 import Header from './compenents/Header'
-=======
-import HomePage from './pages/HomePage/HomePage'
->>>>>>> 8c23e5c (added code of welcom section and make it responsive with all of devices)
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+
 
 const App = () => {
+
+
   return (
-    <div>
-      <Header/>
+    <div className='bg-color_1'>
        <div className='content'>
-           
+            Header
        </div>
 
-        <div className='content'>
+        <main className='content'>
            <HomePage />
-        </div>
+        </main>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { memo, useEffect, useRef, useState } from "react"
 
  const SelectConstants =  ({menu}) => {
 
@@ -76,4 +76,4 @@ import { useEffect, useRef, useState } from "react"
     )
 }
 
-export default SelectConstants
+export default memo(SelectConstants)

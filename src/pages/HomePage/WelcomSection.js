@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import bgWelcomSection from "../../assets/imgaesHome/bg-welcom-section.avif"
 import { cities, typeProcces } from '../../constants'
 import SelectMenu from '../../compenents/SelectConstants'
@@ -50,7 +50,7 @@ const WelcomSection = () => {
                          </button>
                   </div>
                   </div>
-                  <div className='shadow md:w-[80%] w-[95%] md:left-[10%] left-[2.5%]  sm:bottom-[-70px] bottom-[-120px] absolute mx-auto sm:rounded-[50px] py-[20px] bg-white rounded-[0px]'>
+                  <div className='shadow md:w-[80%] w-[95%] md:left-[10%] left-[2.5%]   sm:bottom-[-70px] bottom-[-120px] absolute mx-auto sm:rounded-[50px] py-[20px] bg-white rounded-[0px]'>
                       <div className='grid grid-cols-12 sm:px-[30px] px-[10px]'>
                           <div className='sm:col-span-3 col-span-6 px-[10px]'>
                              <h4 className='text-color_3 sm:text-[36px] text-[20px]'>
@@ -92,4 +92,4 @@ const WelcomSection = () => {
     )
 }
 
-export default WelcomSection
+export default memo(WelcomSection)

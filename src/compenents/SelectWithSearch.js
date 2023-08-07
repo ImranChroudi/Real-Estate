@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { memo, useEffect, useState } from "react"
 
 const SelectWithSearch =  ({menu}) => {
 
@@ -89,4 +89,4 @@ const SelectWithSearch =  ({menu}) => {
 }
 
 
-export default SelectWithSearch
+export default memo(SelectWithSearch)
