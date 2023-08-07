@@ -140,7 +140,9 @@ export const cities = [
 /*__________________________________________*/
 
 
-  
+export const typeProcces = ["Selling", "Renting", "Buying"]
+
+
 
 
 

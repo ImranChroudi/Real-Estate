@@ -1,6 +1,7 @@
 *{
   padding: 0; 
-  margin : 0
+  margin : 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
 }
 
 
@@ -9,8 +10,65 @@
 @tailwind utilities;
 
 
+
+/*----------Leyout------------*/
+
 .content {
-   width: calc(100% - 140px);
-   padding: 40px 0;
-   margin: 0 70px;
+   margin: 0 auto;
+   @apply sm:w-[85%] w-[100%]
+}
+.raduis{
+  border-radius: 10px;
+}
+
+.bg{
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-center{
+  @apply flex items-center justify-center
+}
+
+.flex-between{
+  @apply flex items-center justify-between
+}
+
+.align-center{
+  @apply flex items-center
+}
+
+.btn{
+  height: 50px;
+  padding: 0 30px;
+  @apply flex items-center text-white;
+  
+}
+
+.shadow{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cercle-btn {
+  @apply w-[60px] h-[60px] rounded-full bg-color_3 text-white;
+  
+}
+
+/*--Welcom Section--*/
+
+.bg-welcom-section{
+  position: relative;
+
+}
+
+.bg-welcom-section::after{
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  @apply sm:rounded-[50px] rounded-none;
+  top: 0;
+  background-image: linear-gradient(to right , rgba(0, 0, 0, 0.495) , 5% , transparent);
 }
