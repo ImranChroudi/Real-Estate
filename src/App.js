@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import Header from './compenents/Header'
 
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+
+
 const App = () => {
+
+
   return (
-    <div>
-      <Header/>
+    <div className='bg-color_1'>
        <div className='content'>
-           
+            <Header />
        </div>
+
+        <main className='content'>
+           <HomePage />
+        </main>
     </div>
   )
 }

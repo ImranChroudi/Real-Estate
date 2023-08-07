@@ -1,3 +1,6 @@
+import img_house from "../assets/imagesCard/img-house.jpg"
+
+
 export const navigation = [
     { title: "Home", path: "/" },
     { title: "Listinings", path: "/Listinings" },
@@ -9,24 +12,32 @@ export const navigation = [
 
 /*_______________________________*/
 export const expansiveHousses = [
-    {
-       id: 1,
-       imgs : [
-
-       ] ,
-       title : "",
-       description : "",
-       features : [
-         {
-            id: 1,
-            icon : "",
-            value : ""
-         }
-       ],
-       imgProfile : "",
-       nameProdile : "",
-       starts : ""
-    }
+  {
+    id: 1,
+    imgs: ['img_house.jpg'],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location.',
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed.png',
+        value: '4 bedrooms'
+      },
+      {
+        id: 2,
+        icon: 'icon_bath.png',
+        value: '3 bathrooms'
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft.png',
+        value: '2500 sqft'
+      }
+    ],
+    imgProfile: 'profile_picture.jpg',
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  }
 ]
 
 export const villaVista = [
@@ -140,7 +151,9 @@ export const cities = [
 /*__________________________________________*/
 
 
-  
+export const typeProcces = ["Selling", "Renting", "Buying"]
+
+
 
 
 
