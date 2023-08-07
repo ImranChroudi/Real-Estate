@@ -3,12 +3,12 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <nav className='bg-[#F7F7FD] text-[#7065F0] flex justify-between items-center py-4 px-3 w-full '>
-            <img src='./assets/logo.jpeg' alt='' className='mr-6'/>
+        <nav className=' text-[#7065F0] flex justify-between items-center py-4 px-3 w-full '>
+            <img src='./assets/logo.jpeg' alt='' className=' mr-6'/>
             <input
                type="text-[#D9D9D9]"
                placeholder="Search..."
-               className="px-8 py-2 rounded-2xl focus:outline-none focus:border-[#7065F0] mr-6"
+               className="px-8 py-2 rounded-2xl   mr-6"
             />
             <ul className='flex justify-center items-center'>
                 <li className='px-2'>Home</li>
