@@ -13,24 +13,106 @@ export const navigation = [
 export const expansiveHousses = [
   {
     id: 1,
-    imgs: ['img_house.jpg'],
+    imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
     features: [
       {
         id: 1,
-        icon: 'icon_bed.png',
-        value: '4 bedrooms'
+        icon: 'icon_bed',
+        value: '4 '
       },
       {
         id: 2,
-        icon: 'icon_bath.png',
-        value: '3 bathrooms'
+        icon: 'icon_bath',
+        value: '3 '
       },
       {
         id: 3,
-        icon: 'icon_sqft.png',
-        value: '2500 sqft'
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: 'profile_picture.jpg',
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500'
+      }
+    ],
+    imgProfile: 'profile_picture.jpg',
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3'
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500'
+      }
+    ],
+    imgProfile: 'profile_picture.jpg',
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
       }
     ],
     imgProfile: 'profile_picture.jpg',

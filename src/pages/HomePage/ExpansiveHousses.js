@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import CardsOfHousses from '../../compenents/CardsOfHousses'
 import { expansiveHousses } from '../../constants'
 
 const ExpansiveHousses = () => {
     return (
-        <section className='w-full'>
+        <section className=' w-full'>
             <CardsOfHousses 
                title="Expansive houses"
                description="Lorem ipsum dolor sit amet, 
@@ -16,4 +16,4 @@ const ExpansiveHousses = () => {
     )
 }
 
-export default ExpansiveHousses
+export default memo(ExpansiveHousses)

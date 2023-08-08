@@ -10,7 +10,7 @@ const WelcomSection = () => {
 
 
     return (
-        <div className='welcom-section  w-full'>
+        <div className='welcom-section min-h-[80vh]  w-full'>
              <div className=' w-full relative md:px-[75px] px-[20px] sm:rounded-[50px] rounded-[0px]  py-[100px] bg bg-welcom-section' style={{backgroundImage : `url(${bgWelcomSection})`}}>
                   <div  style={{zIndex : 111}}>
                   <div>
