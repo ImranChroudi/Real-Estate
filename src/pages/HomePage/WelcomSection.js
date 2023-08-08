@@ -1,7 +1,6 @@
 import React, { memo } from 'react'
 import bgWelcomSection from "../../assets/imgaesHome/bg-welcom-section.avif"
 import { cities, typeProcces } from '../../constants'
-import SelectMenu from '../../compenents/SelectConstants'
 import SelectConstants from '../../compenents/SelectConstants'
 import SelectWithSearch from '../../compenents/SelectWithSearch'
 import {IoIosArrowForward} from "react-icons/io"

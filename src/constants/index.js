@@ -1,4 +1,3 @@
-import img_house from "../assets/imagesCard/img-house.jpg"
 
 
 export const navigation = [

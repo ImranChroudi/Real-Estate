@@ -1,5 +1,6 @@
 import React from 'react'
 import {FiArrowRight} from "react-icons/fi"
+import Card from './Card'
 
 const CardsOfHousses = ({title , description , menuCards}) => {
     return (
