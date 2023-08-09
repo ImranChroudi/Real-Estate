@@ -13,7 +13,7 @@ const App = () => {
             <Header />
        </div>
 
-        <main className='content'>
+        <main>
            <HomePage />
         </main>
     </div>

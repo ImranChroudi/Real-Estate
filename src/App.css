@@ -14,8 +14,7 @@
 /*----------Leyout------------*/
 
 .content {
-   margin: 0 auto;
-   @apply sm:w-[85%] w-[100%]
+   width: 85%;
 }
 .raduis{
   border-radius: 10px;
@@ -51,7 +50,15 @@
 
 .cercle-btn {
   @apply w-[60px] h-[60px] rounded-full bg-color_3 text-white;
-  
+}
+
+img{
+  object-fit: cover;
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #F0EFFB, #6547D7) 10;
 }
 
 /*--Welcom Section--*/

@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import CardsOfHousses from '../../compenents/CardsOfHousses'
-import { expansiveHousses } from '../../constants'
+import { cheapHousses, expansiveHousses } from '../../constants'
 
-const ExpansiveHousses = () => {
+const CheapHousses = () => {
     return (
         <section className='content mx-[auto] mb-[40px]'>
             <CardsOfHousses 
@@ -10,10 +10,10 @@ const ExpansiveHousses = () => {
                description="Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore "
-               menuCards={expansiveHousses}
+               menuCards={cheapHousses}
             />
         </section>
     )
 }
 
-export default memo(ExpansiveHousses)
+export default memo(CheapHousses)

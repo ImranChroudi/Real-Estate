@@ -1,4 +1,5 @@
-
+import img_house from "../assets/imagesCard/img-house.jpg"
+import img_profile from "../assets/imagesCard/img_profile.jpg"
 
 export const navigation = [
     { title: "Home", path: "/" },
@@ -15,7 +16,7 @@ export const expansiveHousses = [
     id: 1,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
-    description: 'Spacious and modern house available for sale in a prime location.',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
     features: [
       {
@@ -34,7 +35,7 @@ export const expansiveHousses = [
         value: '2500 '
       }
     ],
-    imgProfile: 'profile_picture.jpg',
+    imgProfile: img_profile,
     nameProfile: 'John Doe',
     stars: '★★★★★'
   },
@@ -42,61 +43,7 @@ export const expansiveHousses = [
     id: 1,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
-    description: 'Spacious and modern house available for sale in a prime location.',
-    price : "$1.900.000",
-    features: [
-      {
-        id: 1,
-        icon: 'icon_bed',
-        value: '4 '
-      },
-      {
-        id: 2,
-        icon: 'icon_bath',
-        value: '3 '
-      },
-      {
-        id: 3,
-        icon: 'icon_sqft',
-        value: '2500'
-      }
-    ],
-    imgProfile: 'profile_picture.jpg',
-    nameProfile: 'John Doe',
-    stars: '★★★★★'
-  },
-  {
-    id: 1,
-    imgs: [img_house],
-    title: 'Beautiful House for Sale',
-    description: 'Spacious and modern house available for sale in a prime location.',
-    price : "$1.900.000",
-    features: [
-      {
-        id: 1,
-        icon: 'icon_bed',
-        value: '4 '
-      },
-      {
-        id: 2,
-        icon: 'icon_bath',
-        value: '3'
-      },
-      {
-        id: 3,
-        icon: 'icon_sqft',
-        value: '2500'
-      }
-    ],
-    imgProfile: 'profile_picture.jpg',
-    nameProfile: 'John Doe',
-    stars: '★★★★★'
-  },
-  {
-    id: 1,
-    imgs: [img_house],
-    title: 'Beautiful House for Sale',
-    description: 'Spacious and modern house available for sale in a prime location.',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
     features: [
       {
@@ -115,52 +62,289 @@ export const expansiveHousses = [
         value: '2500 '
       }
     ],
-    imgProfile: 'profile_picture.jpg',
+    imgProfile: img_profile,
     nameProfile: 'John Doe',
     stars: '★★★★★'
-  }
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  
 ]
 
 export const villaVista = [
-    {
-       id: 1,
-       imgs : [
-
-       ] ,
-       title : "",
-       description : "",
-       features : [
-         {
-            id: 1,
-            icon : "",
-            value : ""
-         }
-       ],
-       imgProfile : "",
-       nameProdile : "",
-       starts : ""
-    }
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  
 ]
 
 export const cheapHousses = [
-    {
-       id: 1,
-       imgs : [
-
-       ] ,
-       title : "",
-       description : "",
-       features : [
-         {
-            id: 1,
-            icon : "",
-            value : ""
-         }
-       ],
-       imgProfile : "",
-       nameProdile : "",
-       starts : ""
-    }
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Cheap Houses Galore - Affordable Abodes',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  {
+    id: 1,
+    imgs: [img_house],
+    title: 'Beautiful House for Sale',
+    description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
+    price : "$1.900.000",
+    features: [
+      {
+        id: 1,
+        icon: 'icon_bed',
+        value: '4 '
+      },
+      {
+        id: 2,
+        icon: 'icon_bath',
+        value: '3 '
+      },
+      {
+        id: 3,
+        icon: 'icon_sqft',
+        value: '2500 '
+      }
+    ],
+    imgProfile: img_profile,
+    nameProfile: 'John Doe',
+    stars: '★★★★★'
+  },
+  
 ]
 
 

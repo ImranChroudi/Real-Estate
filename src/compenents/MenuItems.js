@@ -11,7 +11,7 @@ const MenuItems = () => {
     return (
 
         <ul className='hidden md:flex justify-center items-center'>
-                        {navigation.map(item => (
+                {navigation.map(item => (
                             <li key={item.title} className='px-2'>
                                 <NavLink
                                     to={item.path}
