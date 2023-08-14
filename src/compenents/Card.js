@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import {FaBed} from "react-icons/fa"
 import {BiSolidBath} from "react-icons/bi"
 import { MdPlaylistAdd, MdSquareFoot } from 'react-icons/md';
@@ -26,10 +26,11 @@ const Card = ({item}) => {
     }
 
     return (
-        <div id={id} className='card bg-white rounded-[10px] shadow  overflow-hidden md:col-span-3 sm:col-span-6 col-span-12 '>
-            <div className='relative w-full h-[150px]' >
+        <div id={id} className='card border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
+            <div className='h-full w-full overflow-hidden z-10 rounded-[10px]  bg-white '>
+            <div className='z-1 relative w-full h-[150px]' >
                        {
-                         imgs.map((img , idx)=> <img key={idx} className='absolute w-full h-full' src={img} />)
+                         imgs.map((img , idx)=> <img key={idx} loading={lazy} className='absolute w-full h-full' src={img} />)
                        }
                  <div className='absolute w-full h-full flex justify-between p-[10px]'>
                       <div className='h-full flex flex-col justify-between'>
@@ -47,7 +48,7 @@ const Card = ({item}) => {
                       </button>
                  </div>
             </div>
-            <div className='info p-[10px]'>
+            <div className='z-2 info p-[10px]'>
                 <h3 className='text-[18px] text-black'>
                     {title}
                 </h3>
@@ -83,6 +84,7 @@ const Card = ({item}) => {
                      </div>
                      
                 </div>
+            </div>
             </div>
         </div>
     )

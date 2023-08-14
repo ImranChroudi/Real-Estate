@@ -15,7 +15,7 @@ const CardsOfHousses = ({title , description , menuCards}) => {
                     </p>
                     
                  </div>
-                 <div className='sm:mt-[0] mt-[20px]'>
+                 <div className='hover:scale-[1.7] cursor-pointer transition-[0.5s] sm:mt-[0] mt-[20px]'>
                     <FiArrowRight className="text-color_text text-[1rem]"/>
                  </div>
              </div>

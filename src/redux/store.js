@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import realEstateSlice from './createSlice';
+import realEstateSlice from './slice';
 
 const store = configureStore({
   reducer: {
-    motoRedux: realEstateSlice.reducer,
+    realEstateRedux: realEstateSlice.reducer,
   },
 });
 

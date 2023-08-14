@@ -1,17 +1,18 @@
 import React, { memo } from 'react'
 import WelcomSection from './WelcomSection'
-import CardsOfHousses from '../../compenents/CardsOfHousses'
-import ExpansiveHousses from './ExpansiveHousses'
-import VillaVista from './VillaVista'
-import CheapHouses from './CheapHouses'
 import Housses from './Housses'
+import WhyChooseUs from './WhyChooseUs'
+import img_house from "../../assets/imagesCard/img-house.jpg"
+import OurAgency from './OurAgency'
+
 
 const HomePage = () => {
     return (
         <div className='w-full'>
             <WelcomSection />
             <Housses /> 
-            
+            <WhyChooseUs />
+            <OurAgency />
         </div>
     )
 }

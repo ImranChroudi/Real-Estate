@@ -1,5 +1,12 @@
 import img_house from "../assets/imagesCard/img-house.jpg"
 import img_profile from "../assets/imagesCard/img_profile.jpg"
+import member1Image from '../assets/membersAgency/member1.jpg';
+import member2Image from '../assets/membersAgency/member2.jpg';
+import member3Image from '../assets/membersAgency/member3.jpg';
+import member4Image from '../assets/membersAgency/member4.jpg';
+import member5Image from '../assets/membersAgency/member5.jpg';
+import member6Image from '../assets/membersAgency/member6.jpg';
+
 
 export const navigation = [
     { title: "Home", path: "/" },
@@ -347,22 +354,101 @@ export const cheapHousses = [
   
 ]
 
-
 /*_______________________________*/
 
-export const  memebersAgency =[
-    {
-        id : 1,
-        img: "",
-        name : "",
-        role : "",
-        description : "",
-        sociel : [
-            {}
-        ],
 
+export const whyChooseUS =[
+     {
+       icon : "BiCheckDouble",
+       property : "Customer Reviews and Testimonials "
+     },
+     {
+      icon :"MdSupportAgent" ,
+      property :"Responsive Customer Support" 
+    },
+    {
+      icon : "PiUsersThree" ,
+      property: "Partnerships and Collaborations" 
+    },
+    {
+      icon : "PiBagSimpleBold",
+      property : "Customer Reviews and  Testimonials"
     }
 ]
+/*_______________________________*/
+
+
+
+export const membersAgency = [
+  {
+    id: 0,
+    img: member1Image,
+    name: 'John Doe',
+    role: 'Founder & CEO',
+    description: 'Experienced leader with a passion for real estate.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/johndoe' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/johndoe' },
+    ],
+  },
+  {
+    id: 1,
+    img: member2Image,
+    name: 'Jane Smith',
+    role: 'Marketing Director',
+    description: 'Creative marketer driving our brand to new heights.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/janesmith' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/janesmith' },
+    ],
+  },
+  {
+    id: 2,
+    img: member3Image,
+    name: 'Michael Johnson',
+    role: 'Sales Manager',
+    description: 'Sales guru with a track record of closing deals.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/michaeljohnson' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/michaeljohnson' },
+    ],
+  },
+
+  {
+    id: 3,
+    img: member4Image,
+    name: 'Emily Anderson',
+    role: 'Property Manager',
+    description: 'Dedicated to maintaining and optimizing properties for our clients.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/emilyanderson' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/emilyanderson' },
+    ],
+  },
+  {
+    id: 4,
+    img: member5Image,
+    name: 'David Wilson',
+    role: 'Investment Advisor',
+    description: 'Helping clients make informed real estate investment decisions.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/davidwilson' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/davidwilson' },
+    ],
+  },
+  /*{
+    id: 6,
+    img: member6Image,
+    name: 'Olivia Martinez',
+    role: 'Client Relations Specialist',
+    description: 'Providing excellent service and building strong client relationships.',
+    sociel: [
+      { platform: 'Twitter', link: 'https://twitter.com/oliviamartinez' },
+      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/oliviamartinez' },
+    ],
+  },*/
+];
+
 
 /*_______________________________*/
 

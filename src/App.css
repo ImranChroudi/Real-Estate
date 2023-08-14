@@ -14,7 +14,7 @@
 /*----------Leyout------------*/
 
 .content {
-   width: 85%;
+   @apply sm:w-[85%] w-[90%] mx-[auto]
 }
 .raduis{
   border-radius: 10px;
@@ -48,6 +48,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+
 .cercle-btn {
   @apply w-[60px] h-[60px] rounded-full bg-color_3 text-white;
 }
@@ -56,9 +57,20 @@ img{
   object-fit: cover;
 }
 
-.border-gradient {
-  border: 1px solid transparent;
-  border-image: linear-gradient(to right, #F0EFFB, #6547D7) 10;
+.border-gradient{
+  position: relative;
+}
+
+.border-gradient::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  left: -1px;
+  top: -1px;
+  background: linear-gradient(202.27deg, #7065F0 5.16%, #F0EFFB 57.59%);
+  z-index: 0;
+  border-radius: 10px;
 }
 
 /*--Welcom Section--*/
@@ -79,3 +91,13 @@ img{
   top: 0;
   background-image: linear-gradient(to right , rgba(0, 0, 0, 0.495) , 5% , transparent);
 }
+
+
+/*---------------Agency-----------------*/
+.members-agency{
+  position: relative;
+}
+
+
+
+

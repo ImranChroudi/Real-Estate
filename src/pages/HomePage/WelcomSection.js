@@ -10,12 +10,12 @@ const WelcomSection = () => {
 
 
     return (
-        <div className='welcom-section content mx-[auto] mb-[120px]   sm:w-[85%] w-[100%] '>
-             <div className=' w-full relative md:px-[75px] px-[20px] sm:rounded-[50px] rounded-[0px]  py-[100px] bg bg-welcom-section' style={{backgroundImage : `url(${bgWelcomSection})`}}>
+        <div className='welcom-section mx-[auto] mb-[120px]  sm:w-[85%] w-full '>
+             <div className=' w-full relative md:px-[75px] px-[20px] sm:rounded-[50px] rounded-[0px]  sm:py-[100px] py-[60px] bg bg-welcom-section' style={{backgroundImage : `url(${bgWelcomSection})`}}>
                   <div  style={{zIndex : 111}}>
                   <div>
-                       <h1 className='sm:text-[47px] text-[35px] text-white'>
-                         Unlock the Door To Your Dream Home <br className='xl:block hidden'/>
+                       <h1 className='sm:text-[47px] ss:text-[35px] text-[25px] text-white'>
+                         Unlock the Door To Your Dream <span className='text-color_3 '>Home</span> <br className='xl:block hidden'/>
                          Using Our Platform
                        </h1>
                   </div>
@@ -34,7 +34,7 @@ const WelcomSection = () => {
                           </div>
                          </div>
                       </div>
-
+ 
                          <button className='raduis bg-color_3 lg:ml-[25px] ml-[0]  lg:mt-[0] mt-[10px] text-white flex-center px-[30px] h-[60px]'>
                               Search
                          </button>
@@ -49,7 +49,7 @@ const WelcomSection = () => {
                          </button>
                   </div>
                   </div>
-                  <div className='shadow md:w-[80%] w-[95%] md:left-[10%] left-[2.5%]   sm:bottom-[-70px] bottom-[-120px] absolute mx-auto sm:rounded-[50px] py-[20px] bg-white rounded-[0px]'>
+                  <div className='shadow md:w-[80%] w-[95%] md:left-[10%] left-[2.5%]   sm:bottom-[-70px] bottom-[-120px] absolute mx-auto sm:rounded-[50px] py-[20px] bg-white rounded-[10px]'>
                       <div className='grid grid-cols-12 sm:px-[30px] px-[10px]'>
                           <div className='sm:col-span-3 col-span-6 px-[10px]'>
                              <h4 className='text-color_3 sm:text-[36px] text-[20px]'>
