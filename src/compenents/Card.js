@@ -26,8 +26,8 @@ const Card = ({item}) => {
     }
 
     return (
-        <div id={id} className='card border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
-            <div className='h-full w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1}}>
+        <div id={id} className='card  border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
+            <div className='h-full flex flex-col w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
             <div className='z-1 relative w-full h-[150px]' >
                        {
                          imgs.map((img , idx)=> <img key={idx} loading={lazy} className='absolute w-full h-full' src={img} />)
@@ -48,7 +48,7 @@ const Card = ({item}) => {
                       </button>
                  </div>
             </div>
-            <div className='z-2 info p-[10px]'>
+            <div className=' bg-white info p-[10px]' style={{zIndex : "111"}}>
                 <h3 className='text-[18px] text-black'>
                     {title}
                 </h3>

@@ -8,7 +8,8 @@ module.exports = {
         color_2 : "#909497",
         color_3 : "#6547D7",
         color_4 : "black",
-        color_text : "#9da4b0"
+        color_text : "#9da4b0",
+        low_opacity :  "#dddddd4a"
       },
     fontSize: {
       xs_ftext: '0.875rem',   // Extra Small

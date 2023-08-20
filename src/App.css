@@ -44,6 +44,14 @@
   
 }
 
+button ,input {
+    border: none;
+    outline : none
+}
+button:focus ,input:focus {
+  outline : none
+}
+
 .shadow{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -69,7 +77,6 @@ img{
   left: -1px;
   top: -1px;
   background: linear-gradient(202.27deg, #7065F0 5.16%, #F0EFFB 57.59%);
-  z-index: 0;
   border-radius: 10px;
 }
 
