@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div className='bg-color_1'>
-       <div className='content'>
+       <div className='w-full'>
             <Header />
        </div>
 

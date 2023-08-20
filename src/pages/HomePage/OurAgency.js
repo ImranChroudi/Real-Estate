@@ -15,7 +15,7 @@ const OurAgency = () => {
 
     
     return (
-        <section  className='w-full  relative overflow-hidden  sm:h-[80vh] h-[100vh]'>
+        <section  className='w-full  relative  sm:h-[80vh] h-[100vh]'>
                 <div className='content'>
                    <p className='text-black sm:text-[47px] text-[35px] '>
                       Our <span className='text-color_3'>Agency</span>

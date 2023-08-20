@@ -26,10 +26,10 @@ const WelcomSection = () => {
                              <input className='outline-none w-[100%] px-[10px]' placeholder='What are you looking foor ?'/>
                           </div>
                          <div className='sm:flex-row flex flex-col  md:mt-[0] mt-[10px] md:w-[auto] w-[100%]'>
-                          <div className=' align-center cursor md:w-[180px] w-[100%]' style={{zIndex : 111}} >
+                          <div className=' align-center cursor md:w-[180px] w-[100%]' style={{zIndex : 11}} >
                               <SelectConstants menu={typeProcces} />
                            </div>
-                          <div className=' align-center cursor md:w-[180px] w-[100%]' style={{zIndex : 111}}>
+                          <div className=' align-center cursor md:w-[180px] w-[100%]' style={{zIndex : 11}}>
                               <SelectWithSearch menu={cities} />
                           </div>
                          </div>

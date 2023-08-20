@@ -1,23 +1,36 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { FaRegBell, FaUserAlt } from 'react-icons/fa'
+import { navigation } from '../constants';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+    const toggleNavbar = () =>{
+        setIsOpen(!isOpen);
+    }
+
+    
     return (
-        <div className='md:hidden flex justify-between items-center px-6'>
-            <div className='flex justify-between items-center px-2 mr-5'>
-              <FaUserAlt className='mr-2'/>
-               <p className='text-[#D9D9D9]'>Sign In </p>
-            </div>
-            <div className='mr-6 relative '>
-              <FaRegBell size={35}/>
-            <div className=" text-white absolute top-0 right-0 sm:flex sm:items-center sm:justify-center h-5 w-5 bg-red-500 rounded-full">
-                  2
-            </div> 
-            </div>
-               <button className="flex items-center bg-[#7065F0] text-white px-4 py-2 rounded-lg">
-               Add Listining
-               </button>
-            </div>
+
+        <div className='md:flex flex-row hidden '>
+          <ul className='flex justify-center mr-3 items-center'>
+                {navigation.map(item => (
+                            <li key={item.title} className='px-2 w-[max-content]'>
+                                <NavLink
+                                    to={item.path}
+                                    activeClassName='font-bold'
+                                    className='w-[max-content]'
+                                >
+                                    {item.title}
+                                </NavLink>
+                            </li>
+                  ))}
+
+        </ul>
+        
+        </div>
     )
 }
 

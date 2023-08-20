@@ -27,7 +27,7 @@ const Card = ({item}) => {
 
     return (
         <div id={id} className='card border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
-            <div className='h-full w-full overflow-hidden z-10 rounded-[10px]  bg-white '>
+            <div className='h-full w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1}}>
             <div className='z-1 relative w-full h-[150px]' >
                        {
                          imgs.map((img , idx)=> <img key={idx} loading={lazy} className='absolute w-full h-full' src={img} />)
