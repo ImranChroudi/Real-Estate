@@ -26,7 +26,7 @@ const Card = ({item}) => {
     }
 
     return (
-        <div id={id} className='card  border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
+        <div id={id} className='card animate-y  border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
             <div className='h-full flex flex-col w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
             <div className='z-1 relative w-full h-[150px]' >
                        {

@@ -11,6 +11,7 @@ const CheapHousses = () => {
                             consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore "
                menuCards={cheapHousses}
+               key="cheap_housses"
             />
         </section>
     )

@@ -1,19 +1,20 @@
 import React, { memo } from 'react'
 import CardsOfHousses from '../../compenents/CardsOfHousses'
-import { villaVista } from '../../constants'
+import { listApartments } from '../../constants'
 
-const VillaVista= () => {
+const Apartments= () => {
     return (
         <section className=' content mx-[auto] mb-[40px]'>
             <CardsOfHousses 
-               title="Villa Vista - Explore Exclusivity"
+               title="Apartments"
                description="Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore "
-               menuCards={villaVista}
+               menuCards={listApartments}
+               key="Apartments"
             />
         </section>
     )
 }
 
-export default memo(VillaVista)
+export default memo(Apartments)

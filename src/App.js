@@ -7,6 +7,7 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
 const App = () => {
 
+  
 
   return (
     <div className='bg-color_1'>

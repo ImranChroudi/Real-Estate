@@ -40,15 +40,11 @@ const WelcomSection = () => {
       }
  
         // Select the elements you want to animate
-         const elementsToAnimateY = document.querySelectorAll('.animate-y');
-         const elementsToAnimateX = document.querySelectorAll('.animate-x');
+         const elementsToAnimateY = document.querySelectorAll('.welcom-section .animate-y');
+         const elementsToAnimateX = document.querySelectorAll('.welcom-section .animate-x');
 
          let elementsXY = [...elementsToAnimateX , ...elementsToAnimateY]
-
         
-
-
-
  
         // Apply the common animation to each element
         elementsXY.forEach((element , idx) => {
@@ -65,9 +61,7 @@ const WelcomSection = () => {
                   ...animateAxeX,
                   delay: 0.3 * idx, // Set the delay based on the index
                   scrollTrigger: {
-                     trigger: ".welcom-section",
-                     delay: 0.5 * idx,
-                     toggleActions: 'play none none none' // Set the staggered delay based on the index
+                     trigger: element,
                    },
                 });
             }

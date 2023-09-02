@@ -59,7 +59,7 @@ export const expansiveHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 2,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -86,7 +86,7 @@ export const expansiveHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 3,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -113,7 +113,7 @@ export const expansiveHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 4,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -142,7 +142,7 @@ export const expansiveHousses = [
   
 ]
 
-export const villaVista = [
+export const listApartments = [
   {
     id: 1,
     imgs: [img_house],
@@ -171,7 +171,7 @@ export const villaVista = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 2,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -198,7 +198,7 @@ export const villaVista = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 3,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -225,7 +225,7 @@ export const villaVista = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 4,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -283,7 +283,7 @@ export const cheapHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 2,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -310,7 +310,7 @@ export const cheapHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 3,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
@@ -337,7 +337,7 @@ export const cheapHousses = [
     stars: '★★★★★'
   },
   {
-    id: 1,
+    id: 4,
     imgs: [img_house],
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',

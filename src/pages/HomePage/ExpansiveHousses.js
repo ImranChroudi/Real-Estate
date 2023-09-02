@@ -11,6 +11,7 @@ const ExpansiveHousses = () => {
                             consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore "
                menuCards={expansiveHousses}
+               key="Expansive_houses"
             />
         </section>
     )
