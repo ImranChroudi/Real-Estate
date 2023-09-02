@@ -6,7 +6,7 @@ const CheapHousses = () => {
     return (
         <section className='content mx-[auto] mb-[40px]'>
             <CardsOfHousses 
-               title="Expansive houses"
+               title="Cheap Housses"
                description="Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore "

@@ -39,7 +39,7 @@ const Card = ({item}) => {
                             </button>
                             <div className='h-[30px] flex-center px-[20px] rounded-[10px] bg-color_3'>
                             <h4 className=' text-white text-xs'>
-                              New
+                                New
                             </h4>
                             </div>
                       </div>

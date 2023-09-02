@@ -5,11 +5,11 @@ import { FiArrowRight } from 'react-icons/fi'
 const OurLocations = () => {
 
     return (
-        <section className='h-[70vh] my-[40px]'>
-             <div className='w-full h-full relative'>
-                 <div className='sm:absolute sm:w-[40%] w-full h-full  z-10 left-0 flex-center' style={{zIndex : "1111" ,backgroundImage : "linear-gradient(85.53deg, #7065F0 69.48%, rgba(112, 101, 240, 0) 173.38%)"}}>
+        <section className='sm:h-[70vh] h-[max-content] mt-[40px]'>
+             <div className='w-full grid grid-cols-12 h-full relative'>
+                 <div className='col-span-12 sm:col-span-4  w-full sm:py-[0] py-[30px] h-full z-10  flex-center' style={{zIndex : "1111" ,backgroundImage : "linear-gradient(85.53deg, #7065F0 69.48%, rgba(112, 101, 240, 0) 173.38%)"}}>
                     <div className='mx-[20%] text-center' >
-                         <p className='text-white md:text-[47px] text-[35px] '> 
+                         <p className='text-white title '> 
                           Our Operational 
                           Locations
                            That we are 
@@ -20,10 +20,11 @@ const OurLocations = () => {
                           </div>
                     </div>
                  </div>
-                 <div className='h-full flex w-full'>
+                 <div className='sm:h-full min-w-[max-content] grid-flow-col col-span-12 sm:col-span-8 flex sm:grid grid-cols-12 h-[40vh] grid-rows-1 overflow-scroll w-full'>
+                    
                      {
                         cities.map((item , idx)=> (
-                            <div id={item.id} key={idx} className='relative city h-full w-[20%]'>
+                            <div id={item.id} key={idx} className='overflow-hidden float-right row-span-12 col-span-12 sm:col-span-4 relative city h-full sm:max_w-[20%] min-w-[50%]'>
                                  <img src={item.image} className='absolute h-full w-full' /> 
                                  <div className='z-10 absolute  name-desc-city w-full  p-[20px]'>
                                      <h4 className='text-white text-[30px] mb-[20px]'>{item.name}</h4>

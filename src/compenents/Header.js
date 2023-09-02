@@ -7,31 +7,36 @@ import NavBArMobile from './NavBArMobile';
 import {FaUserAlt , FaRegBell} from "react-icons/fa"
 import NavBarDesktop from './NavBarDesktop';
 import { useMediaQuery } from 'react-responsive';
+import { handleNavMobile, isNavMobileActive } from '../redux/slice';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
 const Header = () => {
 
   const isDesktop = useMediaQuery({minWidth : 1024})
+  const dispatch = useDispatch()
+  const NavMobileActive = useSelector(isNavMobileActive)
 
     return (
-        <header className='mx-[auto] w-[100%] px-[30px] py-[30px] sticky  text-[#7065F0] top-0 z-[20] flex justify-between items-center'>
+        <header className='mx-[auto] w-[100%] sm:px-[30px] px-[10px] py-[30px] sticky  text-[#7065F0] top-0 z-[20] flex justify-between items-center'>
           <div className='flex flex-row items-center xs:mx-auto'>
              <div className='md:flex max-w-[180px] min-w-[120px] md:items-center'>
                 <img src={logo} alt='logo' className='mr-3'/>
              </div>
-             <div className="lg:flex hidden px-[10px] bg-white shadow py-[10px] ml-[20px] rounded-lg items-center">
+             <div className="lg:flex hidden  px-[10px] bg-white shadow py-[10px] ml-[20px] rounded-full items-center">
                <button>
                 <FiSearch />
                </button>
                 <input
                   type="text-[#D9D9D9]"
                    placeholder="Search..."
-                   className="bg-white ml-[10px] lg:flex hidden"
+                   className="bg-white ml-[10px] w-full lg:flex hidden"
                />
              </div>
             </div>
-            <nav className=' text-[#7065F0] sm:flex sm:justify-between sm:items-center md:flex-col py-4 px-3'>
+            <div className='flex'>
+             <nav className=' text-[#7065F0] sm:flex sm:justify-between sm:items-center md:flex-col py-4 px-3'>
                 <div className='lg:hidden flex'>
                    <NavBArMobile/>    
                 </div>
@@ -45,9 +50,7 @@ const Header = () => {
                 </div> */}
              </nav>
 
-
             <div className=' flex justify-between items-center'>
-              
             <div className='relative mr-3'>
               <FaRegBell className='text-[25px]'/>
                <div className=" text-white absolute top-0 right-0 flex items-center justify-center h-4 w-4 bg-red-500 rounded-full">
@@ -59,16 +62,19 @@ const Header = () => {
                  <p className='text-[#D9D9D9] w-[max-content]'>Sign In </p>
               </div>
               <div className='w-[100%] lg:flex hidden'>
-                <button className="flex items-center bg-[#7065F0] text-white px-4 py-2 rounded-lg">
+                <button className="flex btn items-center bg-[#7065F0] text-white px-4 py-2 rounded-lg">
                    Add Listining
                  </button>
               </div>
-              <div className='lg:hidden flex'>
+              <div 
+               onClick={()=>dispatch(handleNavMobile({state : NavMobileActive ? false : true }))}
+              className='lg:hidden flex'>
                     <button className='cursor-pointer text-[1.5rem]'>
                        <FiMenu className='text-color_3'/>
                     </button>
                 </div>
-         </div>
+           </div>
+            </div>
         </header>
     )
 }

@@ -5,12 +5,12 @@ import CheapHouses from './CheapHouses'
 
 const Housses = () => {
     return (
-        <div className='pb-[60px]'>
+        <div className='pb-[60px] sm:mt-[0] mt-[200px]'>
             <ExpansiveHousses />
             <VillaVista />
             <CheapHouses />
             <div className='content mx-[auto] mb-[60px]'> 
-              <button className='mt-[-40px] h-[50px] px-[30px] rounded-[10px]  text-white bg-color_3'>
+              <button className='btn mt-[40px]  h-[50px] px-[30px] rounded-[10px]  text-white bg-color_3'>
                  Advanced Search
               </button>
             </div>

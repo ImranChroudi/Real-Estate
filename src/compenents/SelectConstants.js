@@ -1,13 +1,19 @@
 import { memo, useEffect, useRef, useState } from "react"
+import { handleSelect, selects } from "../redux/slice"
+import { useDispatch, useSelector } from "react-redux"
 
  const SelectConstants =  ({menu}) => {
 
     
+    const dispatch = useDispatch()
+    const {selectTypeActive} = useSelector(selects)
+
 
     const [selectedItem, setSelectedItem] = useState({
         item: menu[0],
         idx: 0
     })
+
     const [state, setState] = useState(false)
     const selectMenuRef = useRef()
 
@@ -25,11 +31,17 @@ import { memo, useEffect, useRef, useState } from "react"
 
     return (
         <div className="relative  min-w-[100%] text-base">
-            <button ref={selectMenuRef} className="flex items-center justify-between gap-2 w-full px-3 py-2 text-color_text bg-white  rounded-md cursor-default outline-none"
+            <button 
+                ref={selectMenuRef} className="flex items-center justify-between gap-2 w-full px-3 py-2 text-color_text bg-white  rounded-md cursor-default outline-none"
                 aria-haspopup="true"
                 aria-expanded="true"
                 aria-labelledby="listbox-label"
-                onClick={() => setState(!state)}
+                onClick={() => 
+                    { 
+                        setState(!state)
+                        dispatch(handleSelect("selectTypeActive"))
+                    }
+                }
             >
                 <div className="flex  items-center gap-x-3">
                     <span className={`text-sm_ftext ${selectedItem.item[2]} text-color_text`}>{selectedItem.item}</span>
@@ -40,8 +52,8 @@ import { memo, useEffect, useRef, useState } from "react"
             </button>
 
             {
-                state ? (
-                    <div className="relative w-full">
+                selectTypeActive ? (
+                    <div className="relative w-full " style={{zIndex : 13}}>
                         <ul className="absolute w-full mt-3 overflow-y-auto bg-white border rounded-md shadow-sm max-h-64" role="listbox">
                             {
                                 menu.map((el, idx) => (

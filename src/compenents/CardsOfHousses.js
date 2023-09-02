@@ -7,7 +7,7 @@ const CardsOfHousses = ({title , description , menuCards}) => {
         <div >
              <div className='w-full flex sm:flex-row sm:justify-between sm:items-center flex-col  '>
                  <div>
-                    <h3 className='text-black text-m2_ftext'> 
+                    <h3 className='text-black title'> 
                        {title}
                     </h3>
                     <p className='text-color_text'>

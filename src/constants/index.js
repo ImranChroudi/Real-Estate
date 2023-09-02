@@ -8,6 +8,10 @@ import member5Image from '../assets/membersAgency/member5.jpg';
 import member6Image from '../assets/membersAgency/member6.jpg';
 
 
+import member4Png from '../assets/membersAgency/without_bg/member4.png';
+
+
+
 import sanfrancisco from '../assets/ourLocations/sanfrancisco.jpg';
 import newyork from '../assets/ourLocations/newyork.jpg';
 import losangelos from '../assets/ourLocations/losangelos.jpg';
@@ -383,17 +387,20 @@ export const whyChooseUS =[
       property : "Customer Reviews and  Testimonials"
     }
 ]
+
 /*_______________________________*/
+
 
 
 
 export const membersAgency = [
   {
     id: 0,
+    num: 0,
     img: member1Image,
     name: 'John Doe',
     role: 'Founder & CEO',
-    description: 'Experienced leader with a passion for real estate.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     sociel: [
       { platform: 'Twitter', link: 'https://twitter.com/johndoe' },
       { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/johndoe' },
@@ -401,10 +408,11 @@ export const membersAgency = [
   },
   {
     id: 1,
+    num: 1,
     img: member2Image,
     name: 'Jane Smith',
     role: 'Marketing Director',
-    description: 'Creative marketer driving our brand to new heights.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     sociel: [
       { platform: 'Twitter', link: 'https://twitter.com/janesmith' },
       { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/janesmith' },
@@ -412,22 +420,24 @@ export const membersAgency = [
   },
   {
     id: 2,
+    num: 2,
     img: member3Image,
     name: 'Michael Johnson',
     role: 'Sales Manager',
-    description: 'Sales guru with a track record of closing deals.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     sociel: [
       { platform: 'Twitter', link: 'https://twitter.com/michaeljohnson' },
       { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/michaeljohnson' },
     ],
   },
-
   {
     id: 3,
+    num: 3,
     img: member4Image,
+    imgWithoutBg : member4Png,
     name: 'Emily Anderson',
     role: 'Property Manager',
-    description: 'Dedicated to maintaining and optimizing properties for our clients.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     sociel: [
       { platform: 'Twitter', link: 'https://twitter.com/emilyanderson' },
       { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/emilyanderson' },
@@ -435,27 +445,25 @@ export const membersAgency = [
   },
   {
     id: 4,
+    num: 4,
     img: member5Image,
+
     name: 'David Wilson',
     role: 'Investment Advisor',
-    description: 'Helping clients make informed real estate investment decisions.',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     sociel: [
       { platform: 'Twitter', link: 'https://twitter.com/davidwilson' },
       { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/davidwilson' },
     ],
   },
-  /*{
-    id: 6,
-    img: member6Image,
-    name: 'Olivia Martinez',
-    role: 'Client Relations Specialist',
-    description: 'Providing excellent service and building strong client relationships.',
-    sociel: [
-      { platform: 'Twitter', link: 'https://twitter.com/oliviamartinez' },
-      { platform: 'LinkedIn', link: 'https://www.linkedin.com/in/oliviamartinez' },
-    ],
-  },*/
 ];
+
+// Project Overview
+/*
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+*/
 
 
 
@@ -501,7 +509,73 @@ export const cities = [
 
 export const typeProcces = ["Selling", "Renting", "Buying"]
 
+/*_____________________________________________*/
 
+
+
+
+export const whatsClientSay = [
+  {
+    id: 0,
+    img: member1Image,
+    name: 'John Doe',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  {
+    id: 1,
+    img: member2Image,
+    name: 'Jane Smith',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    
+  },
+  {
+    id: 2,
+    img: member3Image,
+    name: 'Michael Johnson',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    
+  },
+  {
+    id: 3,
+    img: member4Image,
+    name: 'Emily Anderson',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    
+  },
+  {
+    id: 4,
+    img: member5Image,
+    name: 'David Wilson',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    
+  },
+];
+
+
+/*__________________Footer___________________________*/
+
+
+export const footerData = [ 
+   {
+       titel :"use casses",
+       items : [
+        "Web designers",
+        "Marketers",
+        "Small Business",
+        "Website Builder"
+       ]
+   },
+   {
+      titel :"Company",
+      items : [
+          "About Us",
+          "Careers",
+          "FAQs",
+          "Teams",
+          "Contact Us"
+    ]
+   },
+]
 
 
 

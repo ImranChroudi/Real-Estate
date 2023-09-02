@@ -1,5 +1,6 @@
 import React, { lazy } from 'react'
 import Header from './compenents/Header'
+import Footer from './compenents/Footer';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 
@@ -16,6 +17,8 @@ const App = () => {
         <main> 
            <HomePage />
         </main>
+
+        <Footer />
     </div>
   )
 }

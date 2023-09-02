@@ -1,8 +1,16 @@
 import { memo, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { handleSelect, selects } from "../redux/slice"
 
 const SelectWithSearch =  ({menu}) => {
 
     // You can use any api to generate list of countries
+
+
+    const dispatch = useDispatch()
+    const {selectSearchCityActive} = useSelector(selects)
+
+
     console.log(menu)
     const menuItems = menu.map((item)=> item.name)
 
@@ -30,7 +38,12 @@ const SelectWithSearch =  ({menu}) => {
             <button className="flex items-center justify-between w-full px-3 py-2 text-color_text bg-white  rounded-md cursor-default " 
                 aria-haspopup="true" 
                 aria-expanded="true"
-                onClick={() => setState(!state)}
+                onClick={() => 
+                    {
+                        setState(!state)
+                        dispatch(handleSelect("selectSearchCityActive"))
+                    }
+            }
             >
                 { selectedItem.item || "City" }
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +52,7 @@ const SelectWithSearch =  ({menu}) => {
             </button>
             
             {
-                state ? (
+                selectSearchCityActive ? (
                     <div className="relative w-full">
                         <ul className="absolute w-full mt-3 bg-white border rounded-md shadow-sm" role="listbox">
                             <div className="shadow flex items-center">

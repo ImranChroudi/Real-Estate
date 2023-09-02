@@ -60,8 +60,8 @@ const WhyChooseUs = () => {
       <div
         className={
           idx === 2 || idx === 1
-            ? 'm-[10px] border-gradient  shadow col-span-6 flex-center  h-[190px]'
-            : `m-[10px] border-gradient shadow sm:col-span-5 col-span-6  flex-center h-[160px]  ${idx === 3 ? "self-start" : "self-end" }`
+            ? 'whychooseUs-item m-[10px] border-gradient  shadow col-span-6 flex-center  h-[190px]'
+            : `whychooseUs-item m-[10px] border-gradient shadow sm:col-span-5 col-span-6  flex-center h-[160px]  ${idx === 3 ? "self-start" : "self-end" }`
         }
       >
         <div
