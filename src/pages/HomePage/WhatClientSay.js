@@ -16,6 +16,14 @@ import {RiStarSFill} from "react-icons/ri"
 import Flickity from 'flickity';
 import 'flickity/css/flickity.css';
 
+import { gsap } from 'gsap'
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { animateAxeX, animateAxeY, animateScale } from '../../animate/gsap'
+
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -27,6 +35,7 @@ const WhatClientSay = () => {
 
 
     const sliderRef = useRef()
+
     useEffect(() => {
         const flickity = new Flickity(sliderRef.current, {
           // Flickity options and settings
@@ -41,19 +50,67 @@ const WhatClientSay = () => {
         };
       }, []);
 
+      useEffect(() => {
+
+        const itemsAnimateX  = document.querySelectorAll(".what-client-say .animate-x")
+        const itemsAnimateY   = document.querySelectorAll(".what-client-say .animate-y")
+        const itemsAnimateScale  = document.querySelectorAll(".what-client-say .animate-scale")
+
+
+        const itemsAnimated = [...itemsAnimateX , ...itemsAnimateY , ...itemsAnimateScale]
+
+        itemsAnimated.forEach((element , idx) => {
+
+            if(element.classList.contains("animate-y")){
+                gsap.from( element , {
+                    ...animateAxeY , 
+                    y : 60,
+                    delay : 0.3 * idx,
+                    scrollTrigger : {
+                      trigger : element
+                 }
+               })
+            }
+
+            else if(element.classList.contains("animate-scale")){
+                gsap.from( element , {
+                    ...animateScale , 
+                    delay : 0.3 * idx,
+                    scrollTrigger : {
+                      trigger : element
+                    }
+                })
+            }
+
+          
+
+            else if(element.classList.contains("animate-x")){
+                gsap.from( element , {
+                    ...animateAxeX , 
+                    delay : 0.3 * idx,
+                    scrollTrigger : {
+                      trigger : element
+                    }
+                })
+            }
+        });
+
+        
+      },);
+
 
    
     return (
-        <section className='w-full'>
+        <section className='w-full what-client-say'>
             <div className='content py-[20px]'>
-                  <p className='text-black title '>
+                  <p className='animate-y text-black title '>
                   What did customers <span className='text-color_3'>Say</span>
                   </p>
                 <div className='mt-[20px] py-[20px]'>
                 <div className='' ref={sliderRef} aria-label="My Favorite Images" >
                     {
                         whatsClientSay.map((item , key)=>(
-                         <div className='rounded-[10px] shadow-lg card-client mx-[10px]' >
+                         <div className='animate-y rounded-[10px] shadow-lg card-client mx-[10px]' >
                              <article className="sm:w-[400px] w-[300px] rounded-[10px] relative  z-10   rounded-md duration-300   hover:shadow-sm" key={key}>
 
                                      <div className='w-full h-full rounded-[10px] z-10 py-[15px] '>

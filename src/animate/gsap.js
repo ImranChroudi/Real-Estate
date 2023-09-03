@@ -18,6 +18,13 @@ export let animateAxeY =  {
  }
 
 
+ export let animateAxeYTop =  {
+   y : -20,
+   opacity : 0,
+   duration : 0.3,
+}
+
+
  export let animateScale=  {
    scale  : 0,
    opacity : 0,
