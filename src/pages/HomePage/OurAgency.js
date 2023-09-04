@@ -10,7 +10,7 @@ import { handleLeftMemberAgency, handleRightMemberAgency, memberActive , members
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { animateAxeX, animateAxeY, animateAxeYTop, animateScale } from '../../animate/gsap'
+import { animateAxeX, animateAxeY, animateAxeYTop, animateScale, handleAnimationXY } from '../../animate/gsap'
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -25,50 +25,12 @@ const OurAgency = () => {
 
 
     useEffect(()=>{
-
-        const cardsAnimateY   = document.querySelectorAll(".our-agency  .animate-y")
-        const cardsAnimateScale   = document.querySelectorAll(".our-agency  .animate-scale")
-        const cardsAnimateYTop   = document.querySelectorAll(".our-agency  .animate-y-top")
-
-        const elementsAnimated = [ ...cardsAnimateY , ...cardsAnimateScale , ...cardsAnimateYTop]
-
-
-        elementsAnimated.forEach((element , idx) => {
-            if(element.classList.contains("animate-y")){
-                gsap.from( element , {
-                    ...animateAxeY , 
-                    y : 60,
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-
-            else if(element.classList.contains("animate-scale")){
-                gsap.from( element , {
-                    ...animateScale , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-
-            else if(element.classList.contains("animate-y-top")){
-                gsap.from( element , {
-                    ...animateAxeYTop , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-        });
-         
-
-           
-  },) 
+        const itemsAnimateY   = document.querySelectorAll(".our-agency  .animate-y")
+        const itemsAnimateScale   = document.querySelectorAll(".our-agency  .animate-scale")
+        const itemsAnimateYTop   = document.querySelectorAll(".our-agency  .animate-y-top")
+        const itemsAnimated = [ ...itemsAnimateY , ...itemsAnimateScale , ...itemsAnimateYTop]
+        handleAnimationXY(itemsAnimated)
+  },[]) 
 
     
 
@@ -91,8 +53,8 @@ const OurAgency = () => {
                         membersAgency.map((member , idx)=>(
                                 idx === 2 ? (
                                 <article className=" sm:w-[400px] w-[300px] rounded-[10px] relative mx-[20px]  z-10 shadow-lg  rounded-md duration-300 translate-y-[-50px]  hover:shadow-sm" key={idx}>
-                                      <div className=' absolute bottom-[100%] w-[60%] opacity-75 w-[300px] h-auto left-[50%] translate-x-[-50%] '>
-                                          <img src={member_1_no_bg} />
+                                      <div className='img-agency-png absolute bottom-[100%] w-[60%] opacity-75 w-auto h-[250px] left-[50%] translate-x-[-50%] '>
+                                          <img className='h-[100%]' src={showMember.imgWithoutBg && showMember.imgWithoutBg} />
                                       </div>
                                      <div className='animate-y-top w-full h-full rounded-[10px] z-10 py-[15px] bg-color_1'>
                                      <div className="flex items-center ml-4 mr-2">
@@ -145,8 +107,6 @@ const OurAgency = () => {
                                        <img className='w-full h-full rounded-full'  src={member.img} />
                                    </div>
                                 )
-                            
-                          
                         ))
                     }
 
@@ -156,8 +116,8 @@ const OurAgency = () => {
 
              <div className='w-full  members-agency sm:mb-[100px] py-[40px] items-center sm:hidden block justify-between'>
                                 <article className="sm:max-w-md rounded-[10px] mx-[20px]  z-10 shadow-lg  rounded-md duration-300 translate-y-[-50px]  hover:shadow-sm" >
-                                     <div className='animate-y absolute bottom-[100%] w-[60%] opacity-75 w-[300px] h-auto left-[50%] translate-x-[-50%] '>
-                                          <img src={member_1_no_bg} />
+                                     <div className=' absolute bottom-[100%] w-[60%] opacity-75 w-[300px] h-auto left-[50%] translate-x-[-50%] '>
+                                          <img src={showMember.imgWithoutBg} />
                                       </div>
                                      <div className='animate-y-top w-full h-full rounded-[10px] z-10 py-[15px] bg-color_1'>
                                      <div className="flex items-center ml-4 mr-2">
@@ -188,10 +148,16 @@ const OurAgency = () => {
                                                    </ul>
                                             </div>
                                             <div className='btns-left-right'>
-                                                <button>
+                                                <button
+                                                 onClick={()=> dispatch(handleLeftMemberAgency())
+                                                 }
+                                                > 
                                                    <FiArrowLeft className="text-color_text text-[1rem]"/>
                                                 </button>
-                                                <button>
+                                                <button
+                                                 onClick={()=> dispatch(handleRightMemberAgency())
+                                                 }
+                                                >
                                                    <FiArrowRight className="text-color_text text-[1rem]"/>
                                                 </button>
                                             </div>

@@ -220,3 +220,9 @@ svg , a , li {
   transform: scale(1.08);
 }
 
+
+
+
+.img-agency-png{
+  box-shadow:  2px 2px 2px  #F0EFFB inset;
+}

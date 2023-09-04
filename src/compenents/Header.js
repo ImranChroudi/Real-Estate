@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MenuItems from './MenuItems';
 import logo from '../assets/logo.png';
 import Navbar from './Navbar';
@@ -8,7 +8,13 @@ import {FaUserAlt , FaRegBell} from "react-icons/fa"
 import NavBarDesktop from './NavBarDesktop';
 import { useMediaQuery } from 'react-responsive';
 import { handleNavMobile, isNavMobileActive } from '../redux/slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';import { gsap } from 'gsap'
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -18,13 +24,60 @@ const Header = () => {
   const dispatch = useDispatch()
   const NavMobileActive = useSelector(isNavMobileActive)
 
+     useEffect(() => {
+      // Define the common animation
+        const animateAxeY =  {
+          y : 20,
+          opacity : 0,
+          duration : 0.7,
+          // Add any other animation properties here
+       }
+
+       // Define the common animation
+       const animateAxeX =  {
+         x : -50,
+         opacity : 0,
+         duration : 0.5,
+         // Add any other animation properties here
+      }
+ 
+        // Select the elements you want to animate
+         const elementsToAnimateY = document.querySelectorAll('header .animate-y');
+         const elementsToAnimateX = document.querySelectorAll('header .animate-x');
+
+         let elementsXY = [...elementsToAnimateX , ...elementsToAnimateY]
+        
+ 
+        // Apply the common animation to each element
+        elementsXY.forEach((element , idx) => {
+
+            if(element.classList.contains("animate-y")){
+               gsap.from(element, {
+                  ...animateAxeY,
+                  delay: 0.7 * idx, // Set the delay based on the index
+                });
+            }
+
+            else if(element.classList.contains("animate-x")){
+               gsap.from(element, {
+                  ...animateAxeX,
+                  delay: 0.7 * idx, // Set the delay based on the index
+                  scrollTrigger: {
+                     trigger: element,
+                   },
+                });
+            }
+          });
+
+  })
+
     return (
         <header className='mx-[auto] w-[100%] sm:px-[30px] px-[10px] py-[30px] sticky  text-[#7065F0] top-0 z-[20] flex justify-between items-center'>
           <div className='flex flex-row items-center xs:mx-auto'>
-             <div className='md:flex max-w-[180px] min-w-[120px] md:items-center'>
+             <div className='animate-y md:flex max-w-[180px] min-w-[120px] md:items-center'>
                 <img src={logo} alt='logo' className='mr-3'/>
              </div>
-             <div className="lg:flex hidden  px-[10px] bg-white shadow py-[10px] ml-[20px] rounded-full items-center">
+             <div className="animate-x lg:flex hidden  px-[10px] bg-white shadow py-[10px] ml-[20px] rounded-full items-center">
                <button>
                 <FiSearch />
                </button>

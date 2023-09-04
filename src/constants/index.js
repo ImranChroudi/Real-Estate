@@ -5,10 +5,14 @@ import member2Image from '../assets/membersAgency/member2.jpg';
 import member3Image from '../assets/membersAgency/member3.jpg';
 import member4Image from '../assets/membersAgency/member4.jpg';
 import member5Image from '../assets/membersAgency/member5.jpg';
-import member6Image from '../assets/membersAgency/member6.jpg';
 
-
+import member1Png from '../assets/membersAgency/without_bg/member1.png';
+import member2Png from '../assets/membersAgency/without_bg/member2.png';
+import member3Png from '../assets/membersAgency/without_bg/member3.png';
 import member4Png from '../assets/membersAgency/without_bg/member4.png';
+import member5Png from '../assets/membersAgency/without_bg/member5.png';
+
+
 
 
 
@@ -398,6 +402,7 @@ export const membersAgency = [
     id: 0,
     num: 0,
     img: member1Image,
+    imgWithoutBg : member1Png,
     name: 'John Doe',
     role: 'Founder & CEO',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -410,6 +415,7 @@ export const membersAgency = [
     id: 1,
     num: 1,
     img: member2Image,
+    imgWithoutBg : member2Png,
     name: 'Jane Smith',
     role: 'Marketing Director',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -422,6 +428,7 @@ export const membersAgency = [
     id: 2,
     num: 2,
     img: member3Image,
+    imgWithoutBg : member3Png,
     name: 'Michael Johnson',
     role: 'Sales Manager',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -447,7 +454,7 @@ export const membersAgency = [
     id: 4,
     num: 4,
     img: member5Image,
-
+    imgWithoutBg : member5Png,
     name: 'David Wilson',
     role: 'Investment Advisor',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',

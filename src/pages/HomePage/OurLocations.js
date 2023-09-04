@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { cities } from '../../constants'
 import { FiArrowRight } from 'react-icons/fi'
-import { animateAxeX, animateAxeY } from '../../animate/gsap'
+import { animateAxeX, animateAxeY, handleAnimationXY } from '../../animate/gsap'
 
 import { gsap } from 'gsap'
 
@@ -16,29 +16,7 @@ const OurLocations = () => {
         const itemsAnimateX = document.querySelectorAll(".our-locations .animate-x")
         const itemsAnimateY = document.querySelectorAll(".our-locations .animate-y")
         const itemsAnimated = [...itemsAnimateX , ...itemsAnimateY]
-
-
-        itemsAnimated.forEach((element , idx) => {
-            if(element.classList.contains("animate-y")){
-                gsap.from( element , {
-                    ...animateAxeY , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-
-            else if(element.classList.contains("animate-x")){
-                gsap.from( element , {
-                    ...animateAxeX , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-        });
+        handleAnimationXY(itemsAnimated)
          
     })
 

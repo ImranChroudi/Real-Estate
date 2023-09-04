@@ -26,8 +26,9 @@ const Card = ({item}) => {
     }
 
     return (
-        <div id={id} className='card animate-y  border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow   md:col-span-3 sm:col-span-6 col-span-12 '>
-            <div className='h-full flex flex-col w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
+        <div id={id} className='card animate-y md:col-span-3 sm:col-span-6 col-span-12 '>
+           <div className='border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow '>
+           <div className='h-full flex flex-col w-full overflow-hidden  rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
             <div className='z-1 relative w-full h-[150px]' >
                        {
                          imgs.map((img , idx)=> <img key={idx} loading={lazy} className='absolute w-full h-full' src={img} />)
@@ -50,7 +51,7 @@ const Card = ({item}) => {
             </div>
             <div className=' bg-white info p-[10px]' style={{zIndex : "111"}}>
                 <h3 className='text-[18px] text-black'>
-                    {title}
+                    {title.slice(0 , 25)}...
                 </h3>
 
                 <p className='my-[8px] leading-[22px]  text-color_text'>
@@ -86,6 +87,7 @@ const Card = ({item}) => {
                 </div>
             </div>
             </div>
+            </div> 
         </div>
     )
 }

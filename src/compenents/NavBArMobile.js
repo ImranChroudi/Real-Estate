@@ -32,7 +32,7 @@ const NavBarMobile = () => {
                 {navigation.map(item => (
                             <li
                             
-                            key={item.title} className='px-2 font-semibold my-2 w-[max-content]'>
+                            key={item.title} className='animate-x px-2 font-semibold my-2 w-[max-content]'>
                                 <NavLink
                                    onClick={()=> dispatch(handleNavMobile({state : false}))}
 

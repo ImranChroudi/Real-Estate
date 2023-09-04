@@ -7,7 +7,7 @@ import { whyChooseUS } from '../../constants';
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { animateAxeX, animateAxeY, animateScale } from '../../animate/gsap';
+import { animateAxeX, animateAxeY, animateScale, handleAnimationXY } from '../../animate/gsap';
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -39,28 +39,9 @@ const WhyChooseUs = () => {
     const cardsAnimateScale  = document.querySelectorAll(".why-choose-us .animate-scale")
     const cardsAnimateY   = document.querySelectorAll(".why-choose-us .animate-y")
 
-    const secondAnimation = ()=>{
-       cardsAnimateScale.forEach((element , idx) => {
-        gsap.from( element , {
-          ...animateScale ,
-          delay : 0.5 * idx,
-          scrollTrigger : {
-            trigger : element
-          }
-       })})
-    }
-
-     cardsAnimateY.forEach((element , idx) => {
-         console.log(element.id)
-         gsap.from( element , {
-           ...animateAxeY , 
-           delay : 0.3 * idx,
-           scrollTrigger : {
-             trigger : element
-           }
-       })})
-
-       secondAnimation()
+    const itemsAnimated = [...cardsAnimateY , ...cardsAnimateScale]
+    handleAnimationXY(itemsAnimated)
+    
 },)
 
   

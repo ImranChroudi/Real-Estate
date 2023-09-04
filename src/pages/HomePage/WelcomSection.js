@@ -15,12 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 const WelcomSection = () => {  
     
 
-   const refImg = useRef({})
-   const refSearch = useRef({})
-   const refAnimateAxeX = useRef({})
-
-   
-
+  
 
    useEffect(() => {
       // Define the common animation
@@ -48,14 +43,12 @@ const WelcomSection = () => {
  
         // Apply the common animation to each element
         elementsXY.forEach((element , idx) => {
-
             if(element.classList.contains("animate-y")){
                gsap.from(element, {
                   ...animateAxeY,
                   delay: 0.3 * idx, // Set the delay based on the index
                 });
             }
-
             else if(element.classList.contains("animate-x")){
                gsap.from(element, {
                   ...animateAxeX,
@@ -74,7 +67,7 @@ const WelcomSection = () => {
 
     return (
         <div className='welcom-section mx-[auto] mb-[120px]  sm:w-[85%] w-full '>
-             <div ref={el => (refAnimateAxeX.current.element1 = el)} className=' w-full relative md:px-[75px] px-[20px] sm:rounded-[50px] rounded-[0px]  sm:py-[100px] py-[60px] bg bg-welcom-section' style={{backgroundImage : `url(${bgWelcomSection})`}}>
+             <div  className=' w-full relative md:px-[75px] px-[20px] sm:rounded-[50px] rounded-[0px]  sm:py-[100px] py-[60px] bg bg-welcom-section' style={{backgroundImage : `url(${bgWelcomSection})`}}>
                   <div  className='z-100' style={{zIndex : 111}}>
                     <div className='animate-x' >
                        <h1 className='sm:text-[47px] z-1000 ss:text-[35px] text-[25px] text-white'>
@@ -102,7 +95,7 @@ const WelcomSection = () => {
                          </button>
                   </div>
 
-                  <div ref={(el => {refSearch.current.element2 = el})}  className='animate-y  align-center mt-[20px]'>
+                  <div   className='animate-y  align-center mt-[20px]'>
                          <p className='mr-[10px] text-white'>
                             For More Search Go To 
                          </p>

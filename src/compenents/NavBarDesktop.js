@@ -17,7 +17,7 @@ const NavBarDesktop = () => {
         <div >
           <ul className='flex justify-center mr-3 items-center'>
                 {navigation.map(item => (
-                            <li key={item.title} className='px-2 w-[max-content]'>
+                            <li key={item.title} className='animate-y px-2 w-[max-content]'>
                                 <NavLink
                                     to={item.path}
                                     activeClassName='font-bold'
