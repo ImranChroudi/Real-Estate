@@ -19,7 +19,7 @@ import 'flickity/css/flickity.css';
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { animateAxeX, animateAxeY, animateScale } from '../../animate/gsap'
+import { animateAxeX, animateAxeY, animateScale, handleAnimationXY } from '../../animate/gsap'
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -55,47 +55,9 @@ const WhatClientSay = () => {
         const itemsAnimateX  = document.querySelectorAll(".what-client-say .animate-x")
         const itemsAnimateY   = document.querySelectorAll(".what-client-say .animate-y")
         const itemsAnimateScale  = document.querySelectorAll(".what-client-say .animate-scale")
-
-
         const itemsAnimated = [...itemsAnimateX , ...itemsAnimateY , ...itemsAnimateScale]
+         handleAnimationXY(itemsAnimated)
 
-        itemsAnimated.forEach((element , idx) => {
-
-            if(element.classList.contains("animate-y")){
-                gsap.from( element , {
-                    ...animateAxeY , 
-                    y : 60,
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                 }
-               })
-            }
-
-            else if(element.classList.contains("animate-scale")){
-                gsap.from( element , {
-                    ...animateScale , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-
-          
-
-            else if(element.classList.contains("animate-x")){
-                gsap.from( element , {
-                    ...animateAxeX , 
-                    delay : 0.3 * idx,
-                    scrollTrigger : {
-                      trigger : element
-                    }
-                })
-            }
-        });
-
-        
       },);
 
 
@@ -110,7 +72,7 @@ const WhatClientSay = () => {
                 <div className='' ref={sliderRef} aria-label="My Favorite Images" >
                     {
                         whatsClientSay.map((item , key)=>(
-                         <div className='animate-y rounded-[10px] shadow-lg card-client mx-[10px]' >
+                         <div key={key} className='animate-y rounded-[10px] shadow-lg card-client mx-[10px]' >
                              <article className="sm:w-[400px] w-[300px] rounded-[10px] relative  z-10   rounded-md duration-300   hover:shadow-sm" key={key}>
 
                                      <div className='w-full h-full rounded-[10px] z-10 py-[15px] '>

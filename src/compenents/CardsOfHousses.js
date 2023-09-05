@@ -32,7 +32,7 @@ const CardsOfHousses = ({title , description , menuCards , key}) => {
              </div>
              <div className='w-full grid gap-[20px] mt-[20px] grid-cols-12'>
                     {
-                        menuCards.map((item)=> <Card item={item}/>)
+                        menuCards.map((item , key)=> <Card key={key} item={item}/>)
                     }
                  </div>
         </div>

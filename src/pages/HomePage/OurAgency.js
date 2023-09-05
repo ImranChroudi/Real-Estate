@@ -116,8 +116,8 @@ const OurAgency = () => {
 
              <div className='w-full  members-agency sm:mb-[100px] py-[40px] items-center sm:hidden block justify-between'>
                                 <article className="sm:max-w-md rounded-[10px] mx-[20px]  z-10 shadow-lg  rounded-md duration-300 translate-y-[-50px]  hover:shadow-sm" >
-                                     <div className=' absolute bottom-[100%] w-[60%] opacity-75 w-[300px] h-auto left-[50%] translate-x-[-50%] '>
-                                          <img src={showMember.imgWithoutBg} />
+                                     <div className=' absolute bottom-[100%] opacity-75 w-[max-content] h-[250px] left-[50%] translate-x-[-50%] '>
+                                          <img className='h-[100%]' src={showMember.imgWithoutBg} />
                                       </div>
                                      <div className='animate-y-top w-full h-full rounded-[10px] z-10 py-[15px] bg-color_1'>
                                      <div className="flex items-center ml-4 mr-2">
