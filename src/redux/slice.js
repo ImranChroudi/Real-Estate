@@ -5,6 +5,9 @@ const initialState = {
   membersAgency: membersAgency,
   memberAgencyActive: membersAgency.find((item) => item.num === 2), // Use 'find' to get the active member
   isNavMobileActive : false,
+  sizeHouse : 0,
+  sizeMin : 0 ,
+  sizeMax : 0,
   membersAgencyDownToUp : [0 ,1 , 2 , 3 , 4],
    selects : 
    {
@@ -50,6 +53,11 @@ const realEstateSlice = createSlice({
                state.selects.selectTypeActive = false
                state.selects.selectSearchCityActive = state.selects.selectSearchCityActive ? false : true
           }
+    },
+    handleRange : (state , action)=>{
+        state.sizeMin = action.payload.valueMin 
+        state.sizeMax = action.payload.valueMax
+        
     }
 
   },
@@ -63,7 +71,7 @@ export const selects = (state) => state.realEstateRedux.selects;
 
 
 
-export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect} = realEstateSlice.actions;
+export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect , handleRange} = realEstateSlice.actions;
 
 
 export default realEstateSlice.reducer;

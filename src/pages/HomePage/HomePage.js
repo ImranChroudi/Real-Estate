@@ -2,7 +2,6 @@ import React, { memo } from 'react'
 import WelcomSection from './WelcomSection'
 import Housses from './Housses'
 import WhyChooseUs from './WhyChooseUs'
-import img_house from "../../assets/imagesCard/img-house.jpg"
 import OurAgency from './OurAgency'
 import OurLocations from './OurLocations'
 import WhatClientSay from './WhatClientSay'

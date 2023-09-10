@@ -15,24 +15,11 @@ import { useDispatch, useSelector } from "react-redux"
     })
 
     const [state, setState] = useState(false)
-    const selectMenuRef = useRef()
-
-    useEffect(() => {
-
-        const handleSelectMenu = (e) => {
-            if (!selectMenuRef.current.contains(e.target)) {
-                setState(false)
-            }
-        }
-
-        document.addEventListener('click', handleSelectMenu)
-
-    }, [])
 
     return (
         <div className="relative  min-w-[100%] text-base">
             <button 
-                ref={selectMenuRef} className="flex items-center justify-between gap-2 w-full px-3 py-2 text-color_text bg-white  rounded-md cursor-default outline-none"
+                className="flex items-center justify-between gap-2 w-full px-3 py-2 text-color_text bg-white  rounded-md cursor-default outline-none"
                 aria-haspopup="true"
                 aria-expanded="true"
                 aria-labelledby="listbox-label"

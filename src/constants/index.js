@@ -25,11 +25,11 @@ import checago from '../assets/ourLocations/checago.jpg';
 
 
 export const navigation = [
-    { title: "Home", path: "/" },
-    { title: "Listinings", path: "/Listinings" },
-    { title: "Agency", path: "/Agency" },
-    { title: "Advice", path: "/Advice" },
-    { title: "Contact US", path: "/Contact US" }
+    { title: "Home", path: '/' },
+    { title: "Listinings", path: '/Listinings' },
+    { title: "Agency", path: '/Agency' },
+    { title: "Advice", path: '/Advice' },
+    { title: "Contact US", path: '/Contact US' }
 ]
 
 
@@ -41,6 +41,7 @@ export const expansiveHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -68,6 +69,7 @@ export const expansiveHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "sell",
     features: [
       {
         id: 1,
@@ -95,6 +97,7 @@ export const expansiveHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -122,6 +125,7 @@ export const expansiveHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "sell",
     features: [
       {
         id: 1,
@@ -153,6 +157,7 @@ export const listApartments = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -180,6 +185,7 @@ export const listApartments = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "sell",
     features: [
       {
         id: 1,
@@ -207,6 +213,7 @@ export const listApartments = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+      process : "rent",
     features: [
       {
         id: 1,
@@ -234,6 +241,7 @@ export const listApartments = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "sell",
     features: [
       {
         id: 1,
@@ -265,6 +273,7 @@ export const cheapHousses = [
     title: 'Cheap Houses Galore - Affordable Abodes',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -292,6 +301,7 @@ export const cheapHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "sell",
     features: [
       {
         id: 1,
@@ -319,6 +329,7 @@ export const cheapHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -346,6 +357,7 @@ export const cheapHousses = [
     title: 'Beautiful House for Sale',
     description: 'Spacious and modern house available for sale in a prime location. pacious and modern house available for sale in a prime location.',
     price : "$1.900.000",
+    process : "rent",
     features: [
       {
         id: 1,
@@ -517,6 +529,88 @@ export const cities = [
 export const typeProcces = ["Selling", "Renting", "Buying"]
 
 /*_____________________________________________*/
+
+
+/*______________________________________________*/
+
+// options.js
+
+// City options
+export const cityOptions = [
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  // Add more city options as needed
+];
+
+// Country options
+export const countryOptions = [
+  "United States",
+  "Canada",
+  "United Kingdom",
+  // Add more country options as needed
+];
+
+// Process options
+export const processOptions = [
+  "Buy",
+  "Rent",
+  "Sell",
+  // Add more process options as needed
+];
+
+// Min Price options
+export const priceMinOptions = [
+  "$100",
+  "$150",
+  "$200",
+  "$250",
+  "$300",
+  "$400",
+  "$500",
+  
+  // Add more min price options as needed
+];
+
+// Max Price options
+export const priceMaxOptions = [
+  "$600",
+  "$750",
+  "$1000",
+  "$1250",
+  "$1500",
+  "$2000",
+  // Add more max price options as needed
+];
+
+// Bedroom options
+export const bedroomOptions = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  // Add more bedroom options as needed
+];
+
+// Bathroom options
+export const bathroomOptions = [
+  "1",
+  "2",
+  "3",
+  "4", 
+  "5",
+  "6",
+  
+  // Add more bathroom options as needed
+];
+
+// Amenities options
+export const Amenities = ["pool" , "garage" , "garden" , "fireplace" , "pisine"]
+
+
+export const PropertyType = ["Housses" , "apartments" , "condos" , "townhouses" , "land"]
 
 
 

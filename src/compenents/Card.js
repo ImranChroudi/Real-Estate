@@ -6,7 +6,7 @@ import {PiHeartStraight} from "react-icons/pi"
 
 
 
-const Card = ({item}) => {
+const Card = ({item , styleListings}) => {
 
 
     const {id, imgs, title, description, price,  features, imgProfile, nameProfile, stars} = item
@@ -26,7 +26,13 @@ const Card = ({item}) => {
     }
 
     return (
-        <div id={id} className='card animate-y md:col-span-3 sm:col-span-6 col-span-12 '>
+        <div 
+            id={id} 
+            className={ 
+            styleListings === true ?  
+            `md:col-span-4  sm:col-span-6 col-span-12` : 
+            `card animate-y md:col-span-3 sm:col-span-6 col-span-12`}
+        >
            <div className='border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow '>
            <div className='h-full flex flex-col w-full overflow-hidden rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
             <div className='z-1 relative w-full h-[150px]' >
@@ -38,9 +44,9 @@ const Card = ({item}) => {
                           <button className='like w-[30px] h-[30px] rounded-[10px] bg-white flex-center' >
                               <PiHeartStraight className='text-color_3'/>
                             </button>
-                            <div className='h-[30px] flex-center px-[20px] rounded-[10px] bg-color_3'>
-                            <h4 className=' text-white text-xs'>
-                                New
+                            <div className={`h-[30px] flex-center px-[20px] rounded-[5px] ${item.process === "sell" ? "bg-green-300" : "bg-yellow-500"} `}>
+                            <h4 className=' text-black'>
+                                {item.process}
                             </h4>
                             </div>
                       </div>
@@ -83,7 +89,6 @@ const Card = ({item}) => {
                      <div className='text-yellow-400'>
                         {stars}
                      </div>
-                     
                 </div>
             </div>
             </div>

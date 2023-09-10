@@ -52,10 +52,12 @@
 
 }
 
-button ,input {
+button ,input , select {
     border: none;
-    outline : none
+    outline : none;
+    cursor: pointer;
 }
+
 button:focus ,input:focus {
   outline : none
 }
@@ -86,6 +88,10 @@ img{
   top: -1px;
   background: linear-gradient(202.27deg, #7065F0 5.16%, #F0EFFB 57.59%);
   border-radius: 10px;
+}
+
+.border-solid{
+  border: 1px solid #9da4b0;
 }
 
 .title{
@@ -225,4 +231,22 @@ svg , a , li {
 
 .img-agency-png{
   box-shadow:  2px 2px 2px  #F0EFFB inset;
+}
+
+.btn-checkbox.active{
+  background-color: #6547D7 ;
+}
+
+
+
+
+/*--------------------Input Range--------------------------*/
+
+
+input[type=range]{
+  accent-color: #6547D7 ;
+}
+
+.rangeReserve{
+  direction: rtl;
 }
