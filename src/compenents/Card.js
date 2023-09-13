@@ -30,7 +30,7 @@ const Card = ({item , styleListings}) => {
             id={id} 
             className={ 
             styleListings === true ?  
-            `md:col-span-4  sm:col-span-6 col-span-12` : 
+            `md:col-span-4 animate-y  sm:col-span-6 col-span-12` : 
             `card animate-y md:col-span-3 sm:col-span-6 col-span-12`}
         >
            <div className='border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow '>
@@ -41,8 +41,8 @@ const Card = ({item , styleListings}) => {
                        }
                  <div className='absolute w-full h-full flex justify-between p-[10px]'>
                       <div className='h-full flex flex-col justify-between'>
-                          <button className='like w-[30px] h-[30px] rounded-[10px] bg-white flex-center' >
-                              <PiHeartStraight className='text-color_3'/>
+                          <button className='like w-[30px] icon-hover h-[30px] rounded-[10px] bg-white flex-center' >
+                              <PiHeartStraight />
                             </button>
                             <div className={`h-[30px] flex-center px-[20px] rounded-[5px] ${item.process === "sell" ? "bg-green-300" : "bg-yellow-500"} `}>
                             <h4 className=' text-black'>
@@ -50,14 +50,14 @@ const Card = ({item , styleListings}) => {
                             </h4>
                             </div>
                       </div>
-                      <button className='like w-[30px] h-[30px] rounded-[10px] bg-white flex-center' >
-                              <MdPlaylistAdd className='text-color_3 text-lg'/>
+                      <button className='like w-[30px] h-[30px] rounded-[10px] icon-hover bg-white flex-center' >
+                              <MdPlaylistAdd className='text-lg '/>
                       </button>
                  </div>
             </div>
             <div className=' bg-white info p-[10px]' style={{zIndex : "111"}}>
                 <h3 className='text-[18px] text-black'>
-                    {title.slice(0 , 25)}...
+                    {title.slice(0 , 50)}...
                 </h3>
 
                 <p className='my-[8px] leading-[22px]  text-color_text'>

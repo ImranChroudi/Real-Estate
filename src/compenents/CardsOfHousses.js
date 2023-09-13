@@ -6,13 +6,6 @@ import { gsap } from 'gsap'
 
 const CardsOfHousses = ({styleListings , title , description , menuCards , key}) => {
 
-   const refAnimateX  = useRef({})
-
-  
-
-   
-
-
    
     return (
         <div className='w-full cards-housses' >

@@ -52,6 +52,23 @@
 
 }
 
+.icon-hover{
+    transition: 0.5s;
+}
+
+.icon-hover svg{
+  @apply text-color_3
+}
+
+.icon-hover:hover.icon-hover svg{
+  color: white !important;
+}
+
+.icon-hover:hover{
+  @apply  bg-color_3 text-white ;
+  
+}
+
 button ,input , select {
     border: none;
     outline : none;

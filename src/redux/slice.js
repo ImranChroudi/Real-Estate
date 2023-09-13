@@ -9,11 +9,23 @@ const initialState = {
   sizeMin : 0 ,
   sizeMax : 0,
   membersAgencyDownToUp : [0 ,1 , 2 , 3 , 4],
-   selects : 
+  selects : 
    {
       selectTypeActive : false,
       selectSearchCityActive : false 
-   }
+  },
+  itemsFilter : {
+        city  : "",
+        country : "",
+        process : "",
+        propertyType : [""],
+        minPrice : "",
+        maxPrice : "",
+        bedrooms : "",
+        bathrooms : "",
+        amenities : [""],
+        floors : ""
+  }
 
 };
 
@@ -44,21 +56,45 @@ const realEstateSlice = createSlice({
         state.membersAgencyDownToUp[state.membersAgency[i]?.id] = state.membersAgency[i]
       }
     }, 
-    handleSelect : (state , action) => {
-        if(action.payload === "selectTypeActive"){
-              state.selects.selectTypeActive = state.selects.selectTypeActive ? false : true 
-              state.selects.selectSearchCityActive = false
-           }
-         else{
-               state.selects.selectTypeActive = false
-               state.selects.selectSearchCityActive = state.selects.selectSearchCityActive ? false : true
-          }
+    handleSelect: (state, action) => {
+      const { selects } = state;
+      if (action.payload === 'selectTypeActive') {
+        selects.selectTypeActive = !selects.selectTypeActive;
+        selects.selectSearchCityActive = false;
+      } else {
+        selects.selectTypeActive = false;
+        selects.selectSearchCityActive = !selects.selectSearchCityActive;
+      }
     },
-    handleRange : (state , action)=>{
-        state.sizeMin = action.payload.valueMin 
-        state.sizeMax = action.payload.valueMax
-        
+    handleRange: (state, action) => {
+      const { valueMin, valueMax } = action.payload;
+      state.sizeMin = valueMin;
+      state.sizeMax = valueMax;
+    },
+    handleFilter: (state, action, type) => {
+      const { key, value } = action.payload;
+    
+      if (type === "select") {
+        // Set the value for the specified key
+        state.itemsFilter[key] = value;
+      } else {
+        // Check if the value already exists in the array
+        const index = state.itemsFilter[key].indexOf(value);
+    
+        if (index === -1) {
+          console.log(true);
+          // Value doesn't exist, add it to the array or create a new array
+          state.itemsFilter[key] = state.itemsFilter[key] !== ""
+            ? [...state.itemsFilter[key], value]
+            : [value];
+        } else {
+          console.log(false);
+          // Value exists, remove it from the array
+          state.itemsFilter[key] = state.itemsFilter[key].filter((item) => item !== value);
+        }
+      }
     }
+    
 
   },
 });
@@ -67,11 +103,13 @@ export const isNavMobileActive = (state) => state.realEstateRedux.isNavMobileAct
 export const memberActive = (state) => state.realEstateRedux.memberAgencyActive;
 export const membersAgencyDownToUp = (state) => state.realEstateRedux.membersAgencyDownToUp;
 export const selects = (state) => state.realEstateRedux.selects;
+export const itemsFilter = (state) => state.realEstateRedux.itemsFilter;
 
 
 
 
-export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect , handleRange} = realEstateSlice.actions;
+
+export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect , handleRange , handleFilter} = realEstateSlice.actions;
 
 
 export default realEstateSlice.reducer;
