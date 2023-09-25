@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { handleRange  , itemsFilter} from '../../redux/slice'
+import { handleRange  , itemsFilter , handleFilter, isMapActive, handleMap} from '../../redux/slice'
 import { AiOutlineArrowDown , AiOutlineArrowUp } from 'react-icons/ai'
+import {FaMapMarkerAlt} from 'react-icons/fa'
 import {
     cityOptions,
     countryOptions,
@@ -11,7 +12,8 @@ import {
     bedroomOptions,
     bathroomOptions,
     Amenities,
-    PropertyType
+    PropertyType,
+    typeHousses
   } from '../../constants/index';
 import Select from './Select';
 import Checkbox from './Checkbox';
@@ -21,6 +23,8 @@ import Checkbox from './Checkbox';
 const Filters = () => {
     
     const itemsSelecter = useSelector(itemsFilter)
+    const mapActive = useSelector(isMapActive)
+
 
 
     const refRange = useRef({})
@@ -41,21 +45,24 @@ const Filters = () => {
         dispatch(handleRange({valueMin , valueMax}))
     }
 
-   
 
-    const handleFilter = ()=>{
-        setFilterActive(!filterActive)
-    }
+    
+
+  
     
     return (
-        <div className='w-full sm:sticky  sm:top-[10px] top-0'>
-            <div className='sm:hidden bg-color_3 px-[10px] rounded-[5px] flex btn-filter w-full flex items-center justify-between'>
+        <div className='w-full overflow-scroll sm:top-[10px] top-0'>
+            <div className={`md:hidden visible flex items-center justify-between`}>
+            <div
+              onClick={()=>{
+                setFilterActive(!filterActive)
+            }}
+              className={`bg-color_3 px-[10px] rounded-[5px] w-[48%]  btn-filter  mb-[10px] flex items-center justify-between`}>
                 <h4 className='text-[25px] text-white'>
                     Filters
                 </h4>
                 <button
-                   onClick={()=>handleFilter()}
-                >
+              >
                     {
                         filterActive ?   
                         <AiOutlineArrowUp className='text-[20px] text-white'/>  :
@@ -63,15 +70,31 @@ const Filters = () => {
                     }
                 </button>
             </div>
-            <div className={`selecters sm:mt-[0px] mt-[10px] flex sm:h-auto h-[0px]  overflow-hidden flex-wrap justify-between ${filterActive && "h-auto"}`}>
-                  <div className='md:w-[48%] w-full mb-[10px]'>
+
+            <div 
+                onClick={()=>dispatch(handleMap())}
+               className={`btn-map-mobile cursor-pointer bg-color_3 px-[10px] rounded-[5px] w-[48%] btn-filter  mb-[10px] flex items-center justify-between`}>
+                <h4 className='text-[25px] text-white'>
+                    Carte
+                </h4>
+                <div>
+                    <FaMapMarkerAlt className='text-[20px] text-white'/>
+                </div>
+            </div>
+            </div>
+
+            <div className={`selecters sm:mt-[0px] mt-[10px] flex md:h-auto h-[0px]  overflow-hidden flex-wrap justify-between ${filterActive && "h-auto"}`}>
+                     <div className={`${ mapActive ? "w-full mb-[10px]" : "md:w-[48%] w-full mb-[10px]"}`}>
                       <Select    feature="city"  title="City" items={cityOptions}/>
                     </div>
-                    <div className='md:w-[48%] w-full mb-[10px]'>
+                    <div className={`${mapActive ? "w-full mb-[10px]" : "md:w-[48%] w-full mb-[10px]"}`}>
                       <Select   feature="country" title="Country" items={countryOptions}/>
                     </div>
                     <div className='w-full mb-[10px]'>
                       <Select  feature="process" title="Process" items={processOptions}/>
+                    </div>
+                    <div className='w-full mb-[10px]'>
+                      <Select  feature="type" title="Type" items={typeHousses}/>
                     </div>
                     <div className='w-full mb-[10px]'>
                       <Checkbox   feature="propertyType" title="Property Type :" items={PropertyType}/>
@@ -118,26 +141,25 @@ const Filters = () => {
 
                   </div> 
 
-                  <div className='floors'>
+                  <div className='floors w-full'>
                     <p className='mb-[5px] text-color_text'>
                        Floors :
                     </p>
-                    <div className='w-full'>
-                        <ul className='w-full list-floors flex gap-[10px] items-center justify-between'>
+                     <ul className='w-full list-floors flex  items-center justify-between'>
                             {
-                                [1,2,3,4,5].map((item , key)=>(
+                                [1,2,3,4,5].map((item , idx)=>(
                                  <li 
                                    onClick={()=>{
                                     dispatch(handleFilter({key : "floors" , value : item , type : "select"}))
+                                    console.log("floor : " + item)
                                    }}
-                                   key={key} 
-                                   className='m-0 p-0 text-color_text w-[30px] h-[30px] flex items-center justify-center  border-solid rounded-[5px] bg-white' >
+                                   key={idx} 
+                                   className={`m-0 p-0  w-[30px] h-[30px] flex items-center justify-center  border-solid rounded-[5px]   ${itemsSelecter.floors === item ? "bg-color_3 text-white" : "bg-white text-color_text"}`} >
                                     {item}
                                  </li>
                                 ))
                             }
                          </ul>
-                    </div>
                   </div>
 
             </div>

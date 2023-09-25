@@ -35,7 +35,6 @@ export let animateScale=  {
 export const handleAnimationXY = (itemsAnimated)=>{
    console.log("handle Animation Xy ")
    itemsAnimated.forEach((element , idx) => {
-      
       if(element.classList.contains("animate-y")){
          console.log("animation axs y")
           gsap.from( element , {

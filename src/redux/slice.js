@@ -17,7 +17,8 @@ const initialState = {
   itemsFilter : {
         city  : "",
         country : "",
-        process : "",
+        country : "",
+        type : "",
         propertyType : [""],
         minPrice : "",
         maxPrice : "",
@@ -25,7 +26,8 @@ const initialState = {
         bathrooms : "",
         amenities : [""],
         floors : ""
-  }
+  },
+  isMapActive : false
 
 };
 
@@ -71,8 +73,8 @@ const realEstateSlice = createSlice({
       state.sizeMin = valueMin;
       state.sizeMax = valueMax;
     },
-    handleFilter: (state, action, type) => {
-      const { key, value } = action.payload;
+    handleFilter: (state, action) => {
+      const { key, value , type} = action.payload;
     
       if (type === "select") {
         // Set the value for the specified key
@@ -84,7 +86,7 @@ const realEstateSlice = createSlice({
         if (index === -1) {
           console.log(true);
           // Value doesn't exist, add it to the array or create a new array
-          state.itemsFilter[key] = state.itemsFilter[key] !== ""
+          state.itemsFilter[key] = state.itemsFilter[key] != ""
             ? [...state.itemsFilter[key], value]
             : [value];
         } else {
@@ -93,9 +95,11 @@ const realEstateSlice = createSlice({
           state.itemsFilter[key] = state.itemsFilter[key].filter((item) => item !== value);
         }
       }
+    },
+    handleMap : (state , action)=>{
+       state.isMapActive = !state.isMapActive
+       console.log("yes its map active")
     }
-    
-
   },
 });
 
@@ -104,12 +108,14 @@ export const memberActive = (state) => state.realEstateRedux.memberAgencyActive;
 export const membersAgencyDownToUp = (state) => state.realEstateRedux.membersAgencyDownToUp;
 export const selects = (state) => state.realEstateRedux.selects;
 export const itemsFilter = (state) => state.realEstateRedux.itemsFilter;
+export const isMapActive = (state) => state.realEstateRedux.isMapActive;
 
 
 
 
 
-export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect , handleRange , handleFilter} = realEstateSlice.actions;
+
+export const { handleNavMobile , handleLeftMemberAgency , handleRightMemberAgency , handleSelect , handleRange , handleFilter ,handleMap} = realEstateSlice.actions;
 
 
 export default realEstateSlice.reducer;

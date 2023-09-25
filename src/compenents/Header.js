@@ -74,7 +74,7 @@ const Header = () => {
     return (
         <header className='mx-[auto] w-[100%] sm:px-[30px] px-[10px] py-[30px] sticky  text-[#7065F0] top-0 z-[20] flex justify-between items-center'>
           <div className='flex flex-row items-center xs:mx-auto'>
-             <div className='animate-y md:flex max-w-[180px] min-w-[120px] md:items-center'>
+             <div className='animate-y md:flex max-w-[180px] min-w-[100px] md:items-center'>
                 <img src={logo} alt='logo' className='mr-3'/>
              </div>
              <div className="animate-x lg:flex hidden  px-[10px] bg-white shadow py-[10px] ml-[20px] rounded-full items-center">

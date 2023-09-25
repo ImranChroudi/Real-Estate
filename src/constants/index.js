@@ -12,6 +12,11 @@ import member3Png from '../assets/membersAgency/without_bg/member3.png';
 import member4Png from '../assets/membersAgency/without_bg/member4.png';
 import member5Png from '../assets/membersAgency/without_bg/member5.png';
 
+import imgCard1 from '../assets/imagesCard/cardDetails/imgCard1';
+import imgCard2 from '../assets/imagesCard/cardDetails/imgCard2';
+import imgCard3 from '../assets/imagesCard/cardDetails/imgCard3';
+import imgCard4 from '../assets/imagesCard/cardDetails/imgCard4';
+
 
 
 
@@ -530,6 +535,7 @@ export const typeProcces = ["Selling", "Renting", "Buying"]
 
 /*_____________________________________________*/
 
+export const typeHousses = ["Expancive Housses", "Cheap Housses", "Villa V"]
 
 /*______________________________________________*/
 
@@ -677,6 +683,20 @@ export const footerData = [
     ]
    },
 ]
+
+
+/*--------------------------------------------*/
+
+export const cardDetails = {
+  address: "123 Main Street",
+  price: 350000,
+  bedrooms: 3,
+  bathrooms: 2.5,
+  area: 2000,
+  images: ["image1.jpg", "image2.jpg", "image3.jpg" , "image3.jpg"],
+  video: "video_tour.mp4",
+  description: "This charming 3-bedroom, 2.5-bathroom home offers a cozy living space, a beautiful kitchen, and a large backyard for outdoor gatherings.",
+}
 
 
 

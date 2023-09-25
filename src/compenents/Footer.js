@@ -10,8 +10,8 @@ const Footer = () => {
     return (
          <footer className='pt-[40px] mt-[100px]'>
             <div className='w-full pt-[80px] pb-[40px] relative bg-[#31135E]'>
-                <div className='flex absolute top-[-60px] left-[10%] px-[20px] justify-between items-center py-[40px] w-[80%] mx-auto rounded-[15px] ' style={{backgroundImage : "linear-gradient(to right , #6547D7 , white)"}}>
-                    <p className='text-[20px]'>
+                <div className='flex sm:flex-row flex-col absolute top-[-60px] left-[10%] px-[20px] justify-between items-center py-[40px] w-[80%] mx-auto rounded-[15px] ' style={{backgroundImage : "linear-gradient(to right , #6547D7 , white)"}}>
+                    <p className='text-[20px] sm:mb-[0] mb-[20px]'>
                        Take good design today
                     </p>
                     <div className='flex items-center'>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </button>
                     </div>
                 </div> 
-                <div className=' w-full py-[40px]'>
+                <div className='sm:mt-[0] mt-[20px]  w-full py-[40px]'>
                    <div className='content grid grid-cols-12 flex justify-between'>
                         <div className='md:flex pt-[10px] md:justify-start sm:justify-self-center md:mb-[0] mb-[30px] md:col-span-3 sm:col-span-12 items-start max-w-[180px] min-w-[150px] md:items-center'>
                             <img src={logo} alt='logo' className='flex self-start mr-3'/>
@@ -75,11 +75,11 @@ const Footer = () => {
                               <p className='text-[18px] text-white'>
                                 Subscribe to stay tuned for new web design and latest updates. Let's do it! 
                               </p>
-                              <div className='lg:flex-row flex flex-col lg:items-center items-start  mt-[20px] ' style={{zIndex : 11}}>
+                              <div className=' flex flex-col  items-start  mt-[20px] ' style={{zIndex : 11}}>
                                       <div className=' w-[350px] h-[50px]'>
                                          <input className='w-[max-content] px-[15px] outline-none py-[10px] w-[100%] h-[100%] rounded-[10px] px-[10px]' placeholder='What are you looking foor ?'/>
                                       </div>
-                                    <button className='btn raduis bg-color_3 lg:ml-[25px] ml-[0]  lg:mt-[0] mt-[10px] text-white flex-center px-[30px] h-[50px]'>
+                                    <button className='btn raduis bg-color_3  mt-[20px]    text-white flex-center px-[30px] h-[50px]'>
                                         Search
                                     </button>
                               </div>

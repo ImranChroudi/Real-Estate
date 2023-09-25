@@ -14,8 +14,9 @@
 /*----------Leyout------------*/
 
 .content {
-   @apply sm:w-[85%] w-[90%] mx-[auto]
+   @apply md:w-[85%] px-[2.5%] w-[100%] md:mx-auto;
 }
+
 .raduis{
   border-radius: 10px;
 }
@@ -69,10 +70,16 @@
   
 }
 
-button ,input , select {
+button  , select {
     border: none;
     outline : none;
     cursor: pointer;
+   
+}
+
+input{
+    border: none;
+    outline : none;
 }
 
 button:focus ,input:focus {
@@ -266,4 +273,84 @@ input[type=range]{
 
 .rangeReserve{
   direction: rtl;
+}
+
+
+
+/*__________________Btn Map_________________________*/
+
+.btn-map{
+  width: 130px;
+  overflow: hidden;
+  padding : 15px 0px 15px 15px;
+
+}
+
+.btn-map p{
+    min-width: 100px;
+}
+
+.btn-map svg{
+     font-size: 1.5rem;
+     opacity: 0;
+     transition: 0.5s;
+     transform: translateX(-30px);
+}
+
+.btn-map:hover.btn-map svg{
+    position: initial;
+    opacity: 1;
+    transform: translateX(0);
+    margin-left: 10px;
+    width: max-content;
+
+} 
+
+.btn-map:hover{
+  width: 155px ;
+  overflow: visible;
+}
+
+.overflow-scroll::-webkit-scrollbar  {
+     background-color: #7065F0;
+}
+
+.overflow-scroll {
+  scrollbar-color:  transparent; 
+  scrollbar-width: none ;/* Set the background color and thumb color */
+}
+
+.map{
+  border-top: 3px solid gray;
+}
+
+
+
+.icon-map {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/bgMap.jpg");
+  border: 2px solid #6547D7;
+}
+
+
+
+.btn-map-desktop{
+  opacity: 0;
+}
+
+.icon-map:hover .btn-map-desktop{
+  opacity: 1;
+}
+
+
+.btn-map-desktop::before{
+  position: absolute;
+  content: "";
+  right: -12px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #6547D7 ;
 }

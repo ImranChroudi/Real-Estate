@@ -3,6 +3,10 @@ import {FaBed} from "react-icons/fa"
 import {BiSolidBath} from "react-icons/bi"
 import { MdPlaylistAdd, MdSquareFoot } from 'react-icons/md';
 import {PiHeartStraight} from "react-icons/pi"
+import { isMapActive } from '../redux/slice';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -10,6 +14,8 @@ const Card = ({item , styleListings}) => {
 
 
     const {id, imgs, title, description, price,  features, imgProfile, nameProfile, stars} = item
+
+    const mapActive = useSelector(isMapActive)
 
     console.log(features)
     const Icon = ({icon})=>{
@@ -26,13 +32,17 @@ const Card = ({item , styleListings}) => {
     }
 
     return (
-        <div 
+      
+         <div 
             id={id} 
             className={ 
             styleListings === true ?  
-            `md:col-span-4 animate-y  sm:col-span-6 col-span-12` : 
+            ` ${mapActive ? "md:col-span-6 animate-y" :" md:col-span-4 animate-y  sm:col-span-6 " } col-span-12 ` :  
             `card animate-y md:col-span-3 sm:col-span-6 col-span-12`}
         >
+        <NavLink
+           to={"/PageDetails"}
+         >
            <div className='border-gradient transition-[0.5s] hover:translate-y-[-5px] cursor-pointer shadow '>
            <div className='h-full flex flex-col w-full overflow-hidden rounded-[10px]  bg-white ' style={{zIndex : 1111}}>
             <div className='z-1 relative w-full h-[150px]' >
@@ -57,7 +67,7 @@ const Card = ({item , styleListings}) => {
             </div>
             <div className=' bg-white info p-[10px]' style={{zIndex : "111"}}>
                 <h3 className='text-[18px] text-black'>
-                    {title.slice(0 , 50)}...
+                    {title.slice(0 , 15)}...
                 </h3>
 
                 <p className='my-[8px] leading-[22px]  text-color_text'>
@@ -93,6 +103,7 @@ const Card = ({item , styleListings}) => {
             </div>
             </div>
             </div> 
+            </NavLink>
         </div>
     )
 }

@@ -22,7 +22,7 @@ const ListingsHousses = () => {
                          key="Expansive_houses"
                          styleListings={true}
              />
-             <PaginationStacked />
+            <PaginationStacked />
         </div>
     )
 }
